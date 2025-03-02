@@ -38,7 +38,7 @@ export default async function updateTotalDistance(req, res) {
       userName,
     ]);
 
-    console.log(`\n🟢 STRAVA updateTotalDistance for ${userName}:
+    console.log(`🟢➡️ pages>api>updateTotalDistance set database: ${userName}:
       Last Total Distance: ${lastTotalDistance}
       New Total Distance: ${totalDistance}
       Gold increased amount: ${goldEarned}

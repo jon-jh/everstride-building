@@ -3,11 +3,16 @@ import "./Login.css";
 import { useState } from "react";
 
 const Login = () => {
+  console.log(
+    "00➡️ Loaded app>page.jsx. No user, showing LoginContainer component Login.jsx."
+  );
+
   // Usestate for the form...
   const [username, setUsername] = useState("");
   const [loading, setLoading] = useState(false);
 
-  // Strava data is loaded inside this handleLogin block by api/login.js before opening the home page.
+  // Strava data is loaded inside this handleLogin block by pages/api/login.js before opening the home page.
+
   const handleLogin = async () => {
     setLoading(true);
     try {

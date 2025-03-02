@@ -6,6 +6,7 @@ export const userName = "Jon Hiebert";
 export let accessToken = "";
 
 export async function newAccessToken() {
+  console.log("🟢➡️ newAccessToken sent a FETCH request using the .env file keys to get access to the Strava User's Data");
   try {
     const response = await fetch("https://www.strava.com/oauth/token", {
       method: "post",
