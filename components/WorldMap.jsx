@@ -104,8 +104,8 @@ export const WorldMap = ({ steps, totalSteps }) => {
           <LocationLabel key={index} location={location} containerDimensions={containerDimensions} />
         ))}
 
-        {/* Render the avatar on the map */}
-        <circle cx={avatarPosition.x} cy={avatarPosition.y} r="10" className="avatar" />
+        {/* Render the avatar red dot on the map */}
+        <circle cx={avatarPosition.x} cy={avatarPosition.y} r="15" className="avatar" />
       </svg>
     </div>
   );
