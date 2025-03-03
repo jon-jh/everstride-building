@@ -22,9 +22,9 @@ const Login = () => {
         body: JSON.stringify({ username }),
       });
 
-      await fetch("/api/initUser", {
-        method: "POST",
-      });
+      // await fetch("/api/initUser", {
+      //   method: "POST",
+      // });
 
       window.location.reload();
     } catch (error) {
