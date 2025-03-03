@@ -12,4 +12,5 @@ export default async function login(req, res) {
 
   await newStravaLogic();
   // Run newStravaLogic on login button click
+    res.status(200).json({ message: "Login successful!" });
 }
