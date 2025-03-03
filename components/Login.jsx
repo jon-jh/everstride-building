@@ -3,9 +3,7 @@ import "./Login.css";
 import { useState } from "react";
 
 const Login = () => {
-  console.log(
-    "➡️ Loaded app>page.jsx. No username from useState, display loginContainer."
-  );
+  console.log("➡️ app>page.jsx. username is not set. Showing loginContainer.");
 
   // Usestate for the form...
   const [username, setUsername] = useState("");
@@ -50,5 +48,5 @@ const Login = () => {
     </div>
   );
 };
-// This is the login menu in the nav bar. (moved out of nav to screen center now)
+
 export default Login;
