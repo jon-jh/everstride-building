@@ -11,7 +11,7 @@ export default async function updateDistance(req, res) {
     `;
 
     const result = await db.query(updateQuery, [distance, userName]);
-    console.log(`🟢➡️ pages>api>updateDistance set database: ${userName}: 
+    console.log(`➡️ DB UPDATE updateDistance: ${userName}: 
       Travelled Today: ${distance}`);
 
     res.status(200).json({ message: "Success" });

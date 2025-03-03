@@ -4,7 +4,7 @@ import { useState } from "react";
 
 const Login = () => {
   console.log(
-    "00➡️ Loaded app>page.jsx. No user, showing LoginContainer component Login.jsx."
+    "➡️ Loaded app>page.jsx. No username from useState, display loginContainer."
   );
 
   // Usestate for the form...

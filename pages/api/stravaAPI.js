@@ -1,13 +1,11 @@
 import { accessToken, newAccessToken, userName } from "./stravaUserInfo";
 
 // Function to grab userName
-
 export function getUserName() {
   return userName;
 }
 
 // Function to filter activities by this week only:
-
 export function getTotalDistanceThisWeek(activities) {
   const today = new Date();
   const startOfWeek = new Date(today);
@@ -21,7 +19,6 @@ export function getTotalDistanceThisWeek(activities) {
 }
 
 // Function to filter activities by today only:
-
 export function getTotalDistanceToday(activities) {
   const today = new Date();
   const startOfToday = new Date(today);
@@ -37,32 +34,29 @@ export function getTotalDistanceToday(activities) {
 }
 
 // Function to calculate TOTAL distance:
-
 export function getTotalDistance(activities) {
   return activities.reduce((total, activity) => total + activity.distance, 0);
 }
 
-// Function to generate access token and send a fetch request to Strava to get the JSON data for all fitness recorded from user, PLUS, update the local database with the parsed and calculated data:
-
+// Function to generate access token, fetch the data, parse it, and update the database:
 export async function loadUserData() {
   console.log(
-    "🟢➡️ stravaAPI loadUserData " +
+    "➡️ loadUserData for hardcoded user " +
       JSON.stringify({ userName }) +
-      " called function pages>api>stravaUserInfo>newAccessToken"
+      " awaits stravaUserInfo>newAccessToken."
   );
 
   await newAccessToken(); // Wait for the new access token to be fetched
-  console.log("\n🟢➡️ newAccessToken success, generating link");
+  console.log("➡️ newAccessToken is generating the API link.");
 
   const dataLink = `https://www.strava.com/api/v3/athlete/activities?access_token=${accessToken}`;
-  // Hiding the dataLink now.
-  // console.log(dataLink)
-  console.log("🟢➡️ Fetch request sent to new link");
+
+  console.log("➡️ Sending FETCH request to the API link.");
   return (
     fetch(dataLink)
       .then((res) => res.json())
       .then((activities) => {
-        console.log("🟢➡️ Recieved the JSON response data from STRAVA");
+        console.log("➡️ FETCH JSON Strava data success, now parsing.");
         // console.log(activities)
 
         const totalDistanceThisWeek = Math.round(
@@ -75,12 +69,9 @@ export async function loadUserData() {
         const baseUrl = process.env.BASE_URL || "http://localhost:3000";
         // App home page - Had to be set because this is running server side instead of client side now.
 
-        console.log(
-          "🟢➡️ totalDistance and totalDistanceToday have been calculated"
-        );
-
         // Update total_distance_today in the database
-        console.log("🟢➡️ Calling updateDistance and updateTotalDistance");
+        console.log("➡️ Updating database.");
+
         return fetch(`${baseUrl}/api/updateDistance`, {
           method: "POST",
           headers: {
