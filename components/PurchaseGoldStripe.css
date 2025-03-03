@@ -28,6 +28,8 @@
   align-content: center;
   min-width: 350px;
   padding: 10px 20px;
+  cursor: pointer;
+  z-index:1;
 }
 .Store-Stripe-Banner {
   border-radius: 15px;

@@ -42,7 +42,7 @@ h2.Title {
 }
 
 .Store-item:hover {
-  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.377);
 }
 
 .Store-item button {

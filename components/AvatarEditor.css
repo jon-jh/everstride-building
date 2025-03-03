@@ -79,21 +79,18 @@
   cursor: pointer;
 }
 .equipment-category button {
-  border: solid #a89e91 2px;
+  border: solid #a89e91 3px;
   border-radius: 10px;
   margin: 1px;
-  background-color: #b9b2a7;
+  background-color: #cbc7be;
 
   z-index: 51;
 }
 
 .equipment-category button:hover {
-  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.103);
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.377);
 }
 
-.equipment-thumbnail:hover {
-  opacity: 0.8;
-}
 
 .equip-button {
   font-size: 1.2em;

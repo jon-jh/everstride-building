@@ -59,9 +59,9 @@ a {
   position: absolute;
   width: 110px;
   height: 55px;
-  background-color: rgba(222, 217, 208, 0.2);
+  background-color: rgba(222, 217, 208, 0.379);
   cursor: pointer;
-  transition: background-color 0.15s ease-in-out;
+  transition: background-color 0.25s ease-in-out;
   z-index: 1;
   /* Fade out hover */
 }
