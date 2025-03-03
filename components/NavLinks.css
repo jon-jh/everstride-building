@@ -31,7 +31,7 @@ a {
   font-size: 22px;
   background-color: transparent;
   color: #2b2b2b;
-  text-shadow: 1px 1px 0px rgb(255, 190, 86);
+  /* text-shadow: 1px 1px 0px rgb(255, 190, 86); */
   border: none;
   cursor: pointer;
   position: relative;

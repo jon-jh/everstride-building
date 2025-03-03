@@ -74,15 +74,15 @@
 } */
 
 .equipment-thumbnail {
-  width: 100px;
+  width: 110px;
   height: auto;
   cursor: pointer;
 }
 .equipment-category button {
-  border: solid #a89e91 3px;
+  border: solid #ddf9ff49 3px;
   border-radius: 10px;
   margin: 1px;
-  background-color: #cbc7be;
+  background-color: #e4dede;
 
   z-index: 51;
 }
