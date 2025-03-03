@@ -70,7 +70,7 @@ export async function loadUserData() {
         // App home page - Had to be set because this is running server side instead of client side now.
 
         // Update total_distance_today in the database
-        console.log("➡️ Updating database.");
+        console.log("➡️ Updating database for Strava user only.");
 
         return fetch(`${baseUrl}/api/updateDistance`, {
           method: "POST",
