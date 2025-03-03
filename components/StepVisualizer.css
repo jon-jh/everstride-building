@@ -19,7 +19,7 @@
   font-optical-sizing: auto;
   font-style: normal;
 
-  font-size: calc(0.5rem + 1vh);
+  font-size: calc(0.6rem + 1.1vh);
 }
 
 .StepVisualizer-character {
@@ -49,9 +49,9 @@
   background-color: #dfd9d0;
   width: fit-content;
   min-width: fit-content;
-  height: 2.2em;
+  height: 2em;
   padding: 5px;
-  border-radius: 9px;
+  border-radius: 12px;
 }
 
 .StepVisualizer-goal {
@@ -63,7 +63,7 @@
 
 .StepVisualizer-gold {
   min-width: fit-content;
-  font-size: calc(0.8rem + 1vh);
+  font-size: calc(1rem + 1vh);
 }
 
 /* (Consolidated larger GOLD display with previous layout  */

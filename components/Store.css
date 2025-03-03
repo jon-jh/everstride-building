@@ -88,7 +88,7 @@ p.Item-price {
 }
 
 h3.Store-item-owned-SOLD {
-  color: red;
+  color: rgb(0, 229, 255);
   height: fit-content;
   margin-top: 0px;
   margin-bottom: 0px;
