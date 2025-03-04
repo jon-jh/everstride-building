@@ -12,7 +12,7 @@
   padding: 20px;
   border: 1px solid rgba(0, 0, 0, 0.2);
   /* BIG BOX SHADOW */
-  box-shadow: 0px 900px 0px 1000vmax rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 900px 0px 1000vmax #8560573e;
   background-color: #f2f4f8;
   border-radius: 10px;
 }
