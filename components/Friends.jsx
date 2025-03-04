@@ -112,7 +112,7 @@ const UserCards = ({
 }) => {
   return (
     <div className="container">
-      <h2>Users</h2>
+      <h1>Users ⏬</h1>
       <div className="users">
         {users
           .filter((user) => user.id !== currentUserId)
@@ -129,7 +129,7 @@ const UserCards = ({
                   onClick={() => handleRemoveFriend(user.id)}
                   disabled={!user.isFriend}
                 >
-                  Remove Friend
+                  Remove
                 </button>
                 <button
                   className="addFriend"

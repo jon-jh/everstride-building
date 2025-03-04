@@ -48,8 +48,8 @@ const DevPage = ({ user }) => {
         <div className="devContainerCon">
           <>
             <img src="images/strava-1.png" alt="logo" />
-            <p>Strava app is connected. Your workouts updated on login.</p>
-            <button onClick={handleLoadStrava}>Check Now</button>
+            <p>Strava is connected and updated you on login.</p>
+            <button onClick={handleLoadStrava}>Check For New Workouts</button>
           </>
         </div>
       ) : (
@@ -73,7 +73,7 @@ const DevPage = ({ user }) => {
             className="Add"
             disabled={user.name === "Jon Hiebert"}
           >
-            Add
+            ADD
           </button>
         </form>
       </div>

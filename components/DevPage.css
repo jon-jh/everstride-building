@@ -27,7 +27,7 @@
   border: 1px solid #ccc;
   padding: 20px;
   width: 40%;
-  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.377);
 }
 
 .devContainerAdd p,
@@ -39,12 +39,17 @@
 .devContainerCon button {
   font-weight: bold;
   padding: 5px 10px;
-  background-color: rgb(204, 159, 148);
-  color: black;
+  background-color: #df9d6b;
+  color: white;
   cursor: pointer;
   transition: background-color 0.3s ease;
 
   border-radius: 5px;
+}
+
+.devContainerCon button:not(:disabled):hover{
+  background-color: lightgoldenrodyellow;
+  color:black;
 }
 
 .devContainerAdd form {
@@ -64,15 +69,18 @@
   font-weight: bold;
   padding: 5px 10px;
   width: 19%;
-  background-color: rgb(204, 159, 148);
-  color: black;
+  background-color: #df9d6b;
+  color: white;
   transition: background-color 0.3s ease;
   border-radius: 5px;
 }
 .devContainerAdd button:not(:disabled):hover {
   cursor: pointer;
+  background-color: lightgoldenrodyellow;
+  color:black;
 }
 .devContainerAdd button:disabled {
   background-color: rgba(210, 210, 210, 0.667);
   color: white;
+  
 }

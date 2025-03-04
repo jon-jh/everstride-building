@@ -9,7 +9,7 @@ export default async function removeFriend(req, res) {
 
   try {
     console.log(
-      "removeFriend removing user with ID " +
+      "❌ removeFriend removing user with ID " +
         userId2 +
         " from user ID " +
         userId1
