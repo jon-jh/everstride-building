@@ -8,6 +8,7 @@
   min-height: 130px;
 
   margin-top: 1em;
+  border: solid 5px rgba(255, 255, 255, 0.263);
 
   background-image: url("/assets/scenes/start.png");
   background-size: cover;
