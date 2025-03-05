@@ -28,7 +28,7 @@ const Store = ({ userItems, allItems, user }) => {
 
   return (
     <div className="Store">
-      <h1 className='Title'>You have 💰{user.gold}</h1>
+      <h1 className="Title">You have 💰{user.gold} ⏬</h1>
       <div className="Store-body">
         {/* HATS */}
         <h2>Hats</h2>
@@ -79,7 +79,7 @@ const Store = ({ userItems, allItems, user }) => {
           {shirts.map((shirt) => (
             <div className="Store-item" key={shirt.id}>
               <>
-                <p className='Item-name'>{shirt.name}</p>
+                <p className="Item-name">{shirt.name}</p>
                 <p className="Item-price">💰{shirt.price}</p>
               </>
 
