@@ -31,7 +31,7 @@ export default async function initUser(req, res) {
       }
 
       if (distance_travelled_today === last_travelled_today) {
-        console.log(`🟡 initUser ${name}: No new workouts`);
+        // console.log(`🟡 initUser READ ${name}: No new workouts`);
         continue;
       }
 
@@ -49,7 +49,7 @@ export default async function initUser(req, res) {
 
       // Check to ensure new total distance never decreases
       if (newTotalDistance < total_distance_travelled) {
-        console.log(`🔴 initUser ${name}: Skipped (prevent decrease)`);
+        console.log(`🔴 initUser READ ${name}: Skipped (prevent decrease)`);
         continue;
       }
 
@@ -74,7 +74,7 @@ export default async function initUser(req, res) {
         name,
       ]);
 
-      console.log(`\n🔵 initUser ${name}:
+      console.log(`\n🔵 initUser READ DATABASE ${name}:
         Last Total Distance: ${last_total_distance}
         New Total Distance: ${newTotalDistance}
         Gold increased amount: ${goldEarned}

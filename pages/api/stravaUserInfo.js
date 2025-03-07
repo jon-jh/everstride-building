@@ -7,7 +7,8 @@ export let accessToken = "";
 
 export async function newAccessToken() {
   console.log(
-    "➡️ newAccessToken used .env keys, retrieved new access token for Jons Strava Account [preventing expired key]."
+    "➡️ newAccessToken used .env key, RETRIEVED NEW ACCESS TOKEN for " +
+      JSON.stringify({ userName })
   );
   try {
     const response = await fetch("https://www.strava.com/oauth/token", {

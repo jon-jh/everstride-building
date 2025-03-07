@@ -3,7 +3,7 @@ import "./Login.css";
 import { useState } from "react";
 
 const Login = () => {
-  console.log("➡️ app>page.jsx. username is not set. Showing loginContainer.");
+  console.log("🟠 HOME app>page.jsx. username cookie is not set. SHOW LOGIN.");
 
   // Usestate for the form...
   const [username, setUsername] = useState("");

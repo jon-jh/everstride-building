@@ -41,22 +41,21 @@ export function getTotalDistance(activities) {
 // Function to generate access token, fetch the data, parse it, and update the database:
 export async function loadUserData() {
   console.log(
-    "➡️ loadUserData for hardcoded user " +
-      JSON.stringify({ userName }) +
-      " awaits stravaUserInfo>newAccessToken."
+    "🟢 loadUserData BEGIN STRAVA SEQUENCE " +
+      JSON.stringify({ userName })
   );
 
   await newAccessToken(); // Wait for the new access token to be fetched
-  console.log("➡️ newAccessToken is generating the API link.");
+  console.log("➡️ newAccessToken is generating API link.");
 
   const dataLink = `https://www.strava.com/api/v3/athlete/activities?access_token=${accessToken}`;
 
-  console.log("➡️ Sending FETCH request to the API link.");
+  console.log("➡️ FETCH request to the API link.");
   return (
     fetch(dataLink)
       .then((res) => res.json())
       .then((activities) => {
-        console.log("➡️ FETCH JSON Strava data success, now parsing.");
+        console.log("➡️ RETRIEVED JSON from STRAVA, PARSING.");
         // console.log(activities)
 
         const totalDistanceThisWeek = Math.round(
@@ -70,7 +69,7 @@ export async function loadUserData() {
         // App home page - Had to be set because this is running server side instead of client side now.
 
         // Update total_distance_today in the database
-        console.log("➡️ Updating database for Strava user only.");
+        console.log("➡️ UPDATE PSQL DATABASE " + JSON.stringify({ userName }));
 
         return fetch(`${baseUrl}/api/updateDistance`, {
           method: "POST",

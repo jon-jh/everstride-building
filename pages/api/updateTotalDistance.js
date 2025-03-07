@@ -38,7 +38,7 @@ export default async function updateTotalDistance(req, res) {
       userName,
     ]);
 
-    console.log(`➡️ DB UPDATE updateTotalDistance: ${userName}:
+    console.log(`🟢 updateTotalDistance: ${userName}:
       Last Total Distance: ${lastTotalDistance}
       New Total Distance: ${totalDistance}
       Gold increased amount: ${goldEarned}
