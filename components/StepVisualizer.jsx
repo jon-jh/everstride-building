@@ -2,6 +2,7 @@ import "./StepVisualizer.css";
 import Avatar from "./Avatar";
 import GoalIcon from "./GoalIcon";
 import { getLocation } from "@/pages/api/location";
+import AddProgressForm from "./AddProgressForm";
 
 export default function StepVisualizer({
   userCharacter,
@@ -60,7 +61,9 @@ export default function StepVisualizer({
           )}
         </div>
       </div>
-      <div className="DivThree"></div>
+      <div className="AddProgressDiv">
+        <AddProgressForm user={userCharacter} />
+      </div>
 
       <div
         className="StepVisualizer-character"
