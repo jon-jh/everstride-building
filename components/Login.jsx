@@ -35,13 +35,13 @@ const Login = () => {
   return (
     <div className="Login">
       <select value={username} onChange={(e) => setUsername(e.target.value)}>
-        <option value="">Saved Users</option>
+        <option value="">Choose Player</option>
         <option value="Kyle McParland">Kyle McParland</option>
         <option value="Jon Hiebert">Jon Hiebert</option>
         <option value="Ben Hallam">Ben Hallam</option>
       </select>
       <button onClick={handleLogin} disabled={!username}>
-        Login
+        Start
       </button>
 
       <div className="Loading">{loading && <h1>Loading</h1>}</div>

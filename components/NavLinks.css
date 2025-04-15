@@ -25,12 +25,12 @@ a {
 .NavLinks-button {
   font-family: "Pixelify Sans", serif;
   font-optical-sizing: auto;
-  font-weight: 600;
+  font-weight: 500;
   font-style: normal;
   line-height: 22px;
-  font-size: 22px;
+  font-size: 26px;
   background-color: transparent;
-  color: #2b2b2b;
+  color: #1f1815;
   /* text-shadow: 1px 1px 0px rgb(255, 190, 86); */
   border: none;
   cursor: pointer;
@@ -61,7 +61,7 @@ a {
   height: 55px;
   background-color: rgba(222, 217, 208, 0.379);
   cursor: pointer;
-  transition: background-color 0.25s ease-in-out;
+  transition: background-color 0.5s ease-in-out;
   z-index: 1;
   /* Fade out hover */
 }

@@ -2,15 +2,17 @@
   z-index: 2;
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Ensures spacing between each third */
+  justify-content: space-between;
   width: 100%;
   height: 55px;
   background-color: #9d9084;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
 }
 
 .NavBar-item {
-  flex: 1; /* Each item takes up an equal third */
-  display: flex; /* Center-align content within each item */
+  flex: 1; 
+  display: flex;
   align-items: center;
   justify-content: center;
 }
@@ -23,7 +25,7 @@
 /* .NavBar-logo for the stripe purchase page */
 .Logo,
 .NavBar-logo {
-  color: #2b2b2b;
+  color: #1f1815;
   font-family: "Jacquard 12", serif;
   font-weight: 400;
   font-style: normal;
@@ -32,7 +34,7 @@
 }
 
 .NavBar-logo a {
-  color: #2b2b2b;
+  color: #1f1815;
   text-decoration: none;
 }
 
@@ -44,7 +46,7 @@
   line-height: 22px;
   font-size: 19px;
   width: fit-content;
-  color: #2b2b2b;
+  color: #1f1815;
 }
 
 
@@ -53,7 +55,7 @@
   border-radius: 5px;
   border: none;
   background-color: rgba(222, 217, 208, 0.315);
-  transition: background-color 0.25s ease-out;
+  transition: background-color 0.5s ease-out;
 }
 
 .UserLogOutContainer button:hover {
