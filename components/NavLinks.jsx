@@ -52,7 +52,7 @@ const NavLinks = ({ user, userItems, userEquipment, allItems }) => {
       {/* AVATAR DESKTOP */}
       <Link href="" className="desktop-button">
         <button onClick={toggleAvatarModal} className="NavLinks-button">
-          <p className="a">Avatar Editor</p>
+          <p className="a">Player</p>
         </button>
       </Link>
 
@@ -68,7 +68,7 @@ const NavLinks = ({ user, userItems, userEquipment, allItems }) => {
       {/* STORE DESKTOP */}
       <Link href="" className="desktop-button">
         <button onClick={toggleStoreModal} className="NavLinks-button">
-          <p className="a">Gold Market</p>
+          <p className="a">Store</p>
         </button>
       </Link>
 
@@ -84,7 +84,7 @@ const NavLinks = ({ user, userItems, userEquipment, allItems }) => {
       {/* FRIENDS DESKTOP */}
       <Link href="" className="desktop-button">
         <button onClick={toggleFriendsModal} className="NavLinks-button">
-          <p className="a">My Friends</p>
+          <p className="a">Friends</p>
         </button>
       </Link>
 
@@ -100,7 +100,7 @@ const NavLinks = ({ user, userItems, userEquipment, allItems }) => {
       {/* MAP DESKTOP */}
       <Link href="" className="desktop-button">
         <button onClick={toggleMapModal} className="NavLinks-button">
-          <p className="a">World Map</p>
+          <p className="a">World</p>
         </button>
       </Link>
 

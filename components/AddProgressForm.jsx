@@ -26,7 +26,6 @@ const AddProgressForm = ({ user }) => {
 
   return (
     <div className="AddProgressDiv">
-      <p>How many steps or meters?</p>
       <form onSubmit={handleSubmit}>
         <input
           type="number"
@@ -35,7 +34,7 @@ const AddProgressForm = ({ user }) => {
           disabled={user.name === "Jon Hiebert"}
         />
         <button type="submit" disabled={user.name === "Jon Hiebert"}>
-          ADD
+          Add Steps
         </button>
       </form>
     </div>
