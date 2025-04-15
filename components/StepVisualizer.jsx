@@ -61,8 +61,11 @@ export default function StepVisualizer({
           )}
         </div>
       </div>
+
       <div className="AddProgressDiv">
-        <AddProgressForm user={userCharacter} />
+        <div className="StepVisualizer-textbackground">
+          <AddProgressForm user={userCharacter} />
+        </div>
       </div>
 
       <div

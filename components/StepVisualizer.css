@@ -33,18 +33,19 @@
 .LocationDiv,
 .StepVisualizer-progress,
 .AddProgressDiv {
-  flex: 1;
-  margin: 0;
-  justify-items: center;
-  padding-left: 1em;
-  min-width: 220px;
+  flex: 1; /* Allow divs to grow and shrink evenly */
+  min-width: 280px; /* Ensure minimum width */
+  max-width: 300px; /* Optional limit for width */
+  text-align: center; /* Center-align content within each div */
+  margin: 0 auto;
 }
 
+
 .StepVisualizer-textbackground {
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
-
   background-color: #dfd9d0;
   width: fit-content;
   min-width: fit-content;
@@ -64,5 +65,3 @@
   min-width: fit-content;
   font-size: calc(1rem + 1vh);
 }
-
-/* (Consolidated larger GOLD display with previous layout  */
