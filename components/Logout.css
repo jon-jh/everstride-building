@@ -15,15 +15,17 @@
 }
 
 .UserLogOutContainer button {
-  padding: 5px;
-  border-radius: 5px;
-  border: none;
   background-color: rgba(222, 217, 208, 0.63);
   transition: 0.5s ease-out;
+  width: 7em;
+  height:2em;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: none;
 }
 
 .UserLogOutContainer button:hover {
   cursor: pointer;
-  background-color: rgba(222, 217, 208, 0.8);
+  background-color: rgba(222, 217, 208, 0.897);
   transition: 0s;
 }

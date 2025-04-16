@@ -23,6 +23,8 @@ const AddProgressForm = ({ user, isDisabled }) => {
     }
   };
 
+  const isStrava = user.name === "Jon Hiebert";
+
   return (
     <div className="AddProgressDiv">
       <form onSubmit={handleSubmit}>
@@ -30,10 +32,17 @@ const AddProgressForm = ({ user, isDisabled }) => {
           type="number"
           value={distance}
           onChange={(e) => setDistance(e.target.value)}
-          disabled={isDisabled}
+          disabled={isDisabled || isStrava}
         />
-        <button type="submit" disabled={isDisabled}>
+        <button type="submit" disabled={isDisabled || isStrava}>
           Add Steps
+        </button>
+        <button
+          type="submit"
+          disabled={user.name !== "Jon Hiebert"}
+          onClick={() => window.location.reload()}
+        >
+          Check Strava
         </button>
       </form>
     </div>

@@ -3,32 +3,24 @@
   display: flex;
   flex-direction: row;
   flex-grow: 1;
-
   width: calc(100% - 2em);
   min-height: 130px;
-
   margin-top: 1em;
-
   background-image: url("/assets/scenes/start.png");
   background-size: cover;
-  background-position: center center;
+  background-position: center;
   background-repeat: no-repeat;
   overflow: hidden;
-
-  /* font-family: "Pixelify Sans", serif; */
   font-optical-sizing: auto;
   font-style: normal;
-
   font-size: calc(0.6rem + 1.1vh);
 }
 
 /* Arranged in order of z-index */
-
 .LocationDiv,
 .StepVisualizer-progress {
   z-index: 0;
 }
-
 .StepVisualizer-character {
   z-index: 0;
   position: absolute;
@@ -37,12 +29,26 @@
   height: 100%;
   margin-right: 3em;
 }
-
-.AddProgressDiv {
+.AddProgressDiv{
   z-index: 1;
+} 
+/* Arranged in order of z-index */
+
+.AddProgressDiv input,
+.AddProgressDiv button {
+  transition: 0.5s ease-out;
+  width: 7em;
+  height: 2em;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: none;
 }
 
-/* Arranged in order of z-index */
+.AddProgressDiv button:not(:disabled):hover {
+  cursor: pointer;
+  background-color: white;
+  transition: 0s;
+}
 
 .LocationDiv,
 .StepVisualizer-progress,
