@@ -36,12 +36,12 @@ const Login = () => {
     <div className="Login">
       <select value={username} onChange={(e) => setUsername(e.target.value)}>
         <option value="">Choose Player</option>
-        <option value="Kyle McParland">Kyle McParland</option>
-        <option value="Jon Hiebert">Jon Hiebert</option>
-        <option value="Ben Hallam">Ben Hallam</option>
+        <option value="Kyle McParland">Kyle - Everstride Only</option>
+        <option value="Jon Hiebert">Jon - With Phone App</option>
+        <option value="Ben Hallam">Ben - Everstride Only</option>
       </select>
       <button onClick={handleLogin} disabled={!username}>
-        Start
+        Choose
       </button>
 
       <div className="Loading">{loading && <h1>Loading</h1>}</div>
