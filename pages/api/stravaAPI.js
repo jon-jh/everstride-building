@@ -1,11 +1,11 @@
 import { accessToken, newAccessToken, userName } from "./stravaUserInfo";
 
-// Function to grab userName
+// Grab userName
 export function getUserName() {
   return userName;
 }
 
-// Function to filter activities by this week only:
+// Calculate distance from this week only:
 export function getTotalDistanceThisWeek(activities) {
   const today = new Date();
   const startOfWeek = new Date(today);
@@ -18,7 +18,7 @@ export function getTotalDistanceThisWeek(activities) {
     .reduce((total, activity) => total + activity.distance, 0);
 }
 
-// Function to filter activities by today only:
+// Calculate distance from today only:
 export function getTotalDistanceToday(activities) {
   const today = new Date();
   const startOfToday = new Date(today);
@@ -33,16 +33,15 @@ export function getTotalDistanceToday(activities) {
     .reduce((total, activity) => total + activity.distance, 0);
 }
 
-// Function to calculate TOTAL distance:
-export function getTotalDistance(activities) {
-  return activities.reduce((total, activity) => total + activity.distance, 0);
-}
+// Calculate all-time total distance:
+// export function getTotalDistanceAllTime(activities) {
+//   return activities.reduce((total, activity) => total + activity.distance, 0);
+// }
 
-// Function to generate access token, fetch the data, parse it, and update the database:
+// Generate access token, fetch the data, parse it, and update the database:
 export async function loadUserData() {
   console.log(
-    "🟢 loadUserData BEGIN STRAVA SEQUENCE " +
-      JSON.stringify({ userName })
+    "🟢 loadUserData BEGIN STRAVA SEQUENCE " + JSON.stringify({ userName })
   );
 
   await newAccessToken(); // Wait for the new access token to be fetched
@@ -64,9 +63,10 @@ export async function loadUserData() {
         const totalDistanceToday = Math.round(
           getTotalDistanceToday(activities)
         );
-        const totalDistance = Math.round(getTotalDistance(activities));
+
+        const totalDistance = Math.round(getTotalDistanceThisWeek(activities));
+
         const baseUrl = process.env.BASE_URL || "http://localhost:3000";
-        // App home page - Had to be set because this is running server side instead of client side now.
 
         // Update total_distance_today in the database
         console.log("➡️ UPDATE PSQL DATABASE " + JSON.stringify({ userName }));
