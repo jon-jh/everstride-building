@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { newStravaLogic } from "@/pages/api/newStravaLogic";
 
 const AddProgressForm = ({ user, isDisabled }) => {
   const [distance, setDistance] = useState("");
@@ -38,9 +39,12 @@ const AddProgressForm = ({ user, isDisabled }) => {
           Add Steps
         </button>
         <button
-          type="submit"
+          type="button"
           disabled={isDisabled || user.name !== "Jon Hiebert"}
-          onClick={() => window.location.reload()}
+          onClick={() => {
+            newStravaLogic();
+            window.location.reload();
+          }}
         >
           Check Strava
         </button>
