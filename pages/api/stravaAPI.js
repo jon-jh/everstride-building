@@ -39,6 +39,7 @@ export function getTotalDistanceToday(activities) {
 // }
 
 // Generate access token, fetch the data, parse it, and update the database:
+
 export async function loadUserData() {
   console.log(
     "🟢 loadUserData BEGIN STRAVA SEQUENCE " + JSON.stringify({ userName })
