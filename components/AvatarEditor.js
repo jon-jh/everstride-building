@@ -101,7 +101,7 @@ const AvatarEditor = ({
 
   return (
     <div className="avatar-editor-container">
-      <h3 className="avatar-editor-title">Avatar Editor</h3>
+      <h3 className="avatar-editor-title">Player Editor ⏬</h3>
 
       {/* Display the Avatar */}
       <Avatar

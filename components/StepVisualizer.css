@@ -22,8 +22,15 @@
   font-size: calc(0.6rem + 1.1vh);
 }
 
-.StepVisualizer-character {
+/* Arranged in order of z-index */
+
+.LocationDiv,
+.StepVisualizer-progress {
   z-index: 0;
+}
+
+.StepVisualizer-character {
+  z-index: 1;
   position: absolute;
   top: 44%;
   transform: translate(-50%, -50%);
@@ -31,14 +38,19 @@
   margin-right: 3em;
 }
 
+.AddProgressDiv {
+  z-index: 2;
+}
+
+/* Arranged in order of z-index */
+
 .LocationDiv,
 .StepVisualizer-progress,
 .AddProgressDiv {
-  z-index: 1;
-  flex: 1; /* Allow divs to grow and shrink evenly */
-  min-width: 280px; /* Ensure minimum width */
-  max-width: 300px; /* Optional limit for width */
-  text-align: center; /* Center-align content within each div */
+  flex: 1;
+  min-width: 280px;
+  max-width: 300px;
+  text-align: center;
   margin: 0 auto;
 }
 

@@ -20,6 +20,7 @@
 
 .Logo-box {
   width: fit-content;
+  height: inherit;
 }
 
 /* .NavBar-logo for the stripe purchase page */

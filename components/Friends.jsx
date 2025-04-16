@@ -112,7 +112,7 @@ const UserCards = ({
 }) => {
   return (
     <div className="container">
-      <h1>Users ⏬</h1>
+      <h1>Add Friends ⏬</h1>
       <div className="users">
         {users
           .filter((user) => user.id !== currentUserId)
