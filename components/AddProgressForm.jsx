@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 
-const AddProgressForm = ({ user }) => {
+const AddProgressForm = ({ user, isDisabled }) => {
   const [distance, setDistance] = useState("");
 
   const handleSubmit = async (event) => {
@@ -30,9 +30,9 @@ const AddProgressForm = ({ user }) => {
           type="number"
           value={distance}
           onChange={(e) => setDistance(e.target.value)}
-          disabled={user.name === "Jon Hiebert"}
+          disabled={isDisabled}
         />
-        <button type="submit" disabled={user.name === "Jon Hiebert"}>
+        <button type="submit" disabled={isDisabled}>
           Add Steps
         </button>
       </form>

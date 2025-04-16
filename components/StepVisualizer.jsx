@@ -12,6 +12,7 @@ export default function StepVisualizer({
   boots,
   weapon,
   goal_distance,
+  isMainUser,
 }) {
   // Deconstruct stats from userCharacter...
   let { name, distance_travelled_today, user_tag } = userCharacter;
@@ -64,7 +65,7 @@ export default function StepVisualizer({
 
       <div className="AddProgressDiv">
         <div className="StepVisualizer-textbackground">
-          <AddProgressForm user={userCharacter} />
+          <AddProgressForm user={userCharacter} isDisabled={!isMainUser}/>
         </div>
       </div>
 
