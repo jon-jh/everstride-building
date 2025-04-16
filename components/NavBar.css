@@ -11,12 +11,11 @@
 }
 
 .NavBar-item {
-  flex: 1; 
+  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
 
 .Logo-box {
   width: fit-content;
@@ -38,33 +37,6 @@
   color: #1f1815;
   text-decoration: none;
 }
-
-.UserLogOutContainer {
-  font-family: "Pixelify Sans", serif;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: normal;
-  line-height: 22px;
-  font-size: 19px;
-  width: fit-content;
-  color: #1f1815;
-}
-
-
-.UserLogOutContainer button {
-  padding: 5px;
-  border-radius: 5px;
-  border: none;
-  background-color: rgba(222, 217, 208, 0.63);
-  transition: 0.5s ease-out;
-}
-
-.UserLogOutContainer button:hover {
-  cursor: pointer;
-  background-color: #f2f4f8;
-  transition: 0s;
-}
-
 
 a {
   text-decoration: none;
