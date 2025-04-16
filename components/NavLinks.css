@@ -61,7 +61,7 @@ a {
   height: 55px;
   background-color: rgba(222, 217, 208, 0.379);
   cursor: pointer;
-  transition: background-color 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
   z-index: 1;
   /* Fade out hover */
 }

@@ -1,4 +1,6 @@
 .Modal {
+  z-index: 10;
+  border-radius: 15px;
   display: flex;
   position: absolute;
   justify-content: center;
@@ -9,8 +11,7 @@
   height: 75%;
   max-width: 900px;
   width: 80%;
-  z-index: 50;
-  border-radius: 15px;
+  
   box-shadow: 0 0 0 50vmax rgba(0, 0, 0, 0.7);
   background-color: whitesmoke;
   border: solid #554c49 8px;
