@@ -39,7 +39,7 @@ const AddProgressForm = ({ user, isDisabled }) => {
         </button>
         <button
           type="submit"
-          disabled={user.name !== "Jon Hiebert"}
+          disabled={isDisabled || user.name !== "Jon Hiebert"}
           onClick={() => window.location.reload()}
         >
           Check Strava
