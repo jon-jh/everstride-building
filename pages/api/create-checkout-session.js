@@ -10,7 +10,7 @@ export default async function handler(req, res) {
             price_data: {
               currency: "cad",
               product_data: {
-                name: "300 Gold",
+                name: "1000 Gold",
               },
               unit_amount: 500,
             },
@@ -19,7 +19,7 @@ export default async function handler(req, res) {
         ],
         mode: "payment",
         ui_mode: "embedded",
-        return_url: "https://everstride.vercel.app/stripe-redirect",
+        return_url: "http://localhost:3000/stripe-redirect",
       });
 
       res.status(200).json({ clientSecret: session.client_secret });

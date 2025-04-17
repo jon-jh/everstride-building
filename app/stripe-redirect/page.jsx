@@ -15,7 +15,7 @@ export default async function StripeRedirect() {
   const cookieSession = await getCookieData();
 
   const userResponse = await fetch(
-    `https://everstride.vercel.app/api/getUserByName?name=${cookieSession}`,
+    `http://localhost:3000/api/getUserByName?name=${cookieSession}`,
     {
       method: "GET",
       headers: { "Content-Type": "Application/json" },
@@ -27,9 +27,9 @@ export default async function StripeRedirect() {
   const userId = userObject.id;
   let userGold = userObject.gold;
 
-  const newGoldAmount = (userGold += 300);
+  const newGoldAmount = (userGold += 1000);
 
-  const goldResponse = await fetch("https://everstride.vercel.app/api/updateUserGold", {
+  const goldResponse = await fetch("http://localhost:3000/api/updateUserGold", {
     method: "POST",
     headers: {
       "Content-Type": "Application/json",

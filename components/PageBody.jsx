@@ -46,6 +46,7 @@ export default async function PageBody({ user, friends, goal_distance }) {
         key={user.id}
         {...userEquipment}
         goal_distance={goal_distance}
+        isMainUser={true} // New prop which indicates who to render Progress Add form on.
       />
 
       {/* Render friends below */}
@@ -55,6 +56,7 @@ export default async function PageBody({ user, friends, goal_distance }) {
           key={friendData.id}
           {...friendData.equipment}
           goal_distance={goal_distance}
+          isMainUser={false} // New prop which indicates who to render Progress Add form on.
         />
       ))}
     </main>

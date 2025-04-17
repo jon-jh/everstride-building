@@ -4,10 +4,8 @@ import { useState } from "react";
 import "./NavLinks.css";
 import Link from "next/link";
 import Modal from "./Modal";
-
 import AvatarEditor from "./AvatarEditor";
 import Store from "./Store";
-import DevPage from "./DevPage";
 import Friends from "./Friends";
 import { WorldMap } from "./WorldMap";
 
@@ -23,7 +21,6 @@ import {
 const NavLinks = ({ user, userItems, userEquipment, allItems }) => {
   const [isAvatarModalOpen, setAvatarModalOpen] = useState(false);
   const [isStoreModalOpen, setStoreModalOpen] = useState(false);
-  const [isDevModalOpen, setDevModelOpen] = useState(false);
   const [isFriendsModalOpen, setFriendsModelOpen] = useState(false);
   const [isMapModalOpen, setMapModalOpen] = useState(false);
 
@@ -38,11 +35,6 @@ const NavLinks = ({ user, userItems, userEquipment, allItems }) => {
   // STORE:
   const toggleStoreModal = () => {
     setStoreModalOpen(!isStoreModalOpen);
-  };
-
-  // DEV:
-  const toggleDevModal = () => {
-    setDevModelOpen(!isDevModalOpen);
   };
 
   // FRIENDS:
@@ -60,7 +52,7 @@ const NavLinks = ({ user, userItems, userEquipment, allItems }) => {
       {/* AVATAR DESKTOP */}
       <Link href="" className="desktop-button">
         <button onClick={toggleAvatarModal} className="NavLinks-button">
-          <p className="a">Avatar Editor</p>
+          <p className="a">Player</p>
         </button>
       </Link>
 
@@ -76,7 +68,7 @@ const NavLinks = ({ user, userItems, userEquipment, allItems }) => {
       {/* STORE DESKTOP */}
       <Link href="" className="desktop-button">
         <button onClick={toggleStoreModal} className="NavLinks-button">
-          <p className="a">Gold Market</p>
+          <p className="a">Store</p>
         </button>
       </Link>
 
@@ -92,7 +84,7 @@ const NavLinks = ({ user, userItems, userEquipment, allItems }) => {
       {/* FRIENDS DESKTOP */}
       <Link href="" className="desktop-button">
         <button onClick={toggleFriendsModal} className="NavLinks-button">
-          <p className="a">My Friends</p>
+          <p className="a">Friends</p>
         </button>
       </Link>
 
@@ -108,7 +100,7 @@ const NavLinks = ({ user, userItems, userEquipment, allItems }) => {
       {/* MAP DESKTOP */}
       <Link href="" className="desktop-button">
         <button onClick={toggleMapModal} className="NavLinks-button">
-          <p className="a">World Map</p>
+          <p className="a">World</p>
         </button>
       </Link>
 
@@ -117,22 +109,6 @@ const NavLinks = ({ user, userItems, userEquipment, allItems }) => {
         <button onClick={toggleMapModal} className="NavLinks-button">
           <p className="a">
             <FontAwesomeIcon icon={faMap} />
-          </p>
-        </button>
-      </Link>
-
-      {/* PROGRESS DESKTOP */}
-      <Link href="" className="desktop-button">
-        <button onClick={toggleDevModal} className="NavLinks-button">
-          <p className="a">Add Progress</p>
-        </button>
-      </Link>
-
-      {/* PROGRESS MOBILE */}
-      <Link href="" className="mobile-button">
-        <button onClick={toggleDevModal} className="NavLinks-button">
-          <p className="a">
-            <FontAwesomeIcon icon={faLocationDot} />
           </p>
         </button>
       </Link>
@@ -157,13 +133,6 @@ const NavLinks = ({ user, userItems, userEquipment, allItems }) => {
         {isStoreModalOpen && (
           <Modal toggleModal={toggleStoreModal}>
             <Store userItems={userItems} allItems={allItems} user={user} />
-          </Modal>
-        )}
-
-        {/* DEV MODAL */}
-        {isDevModalOpen && (
-          <Modal toggleModal={toggleDevModal}>
-            <DevPage user={user} />
           </Modal>
         )}
 

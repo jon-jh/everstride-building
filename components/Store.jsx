@@ -28,7 +28,7 @@ const Store = ({ userItems, allItems, user }) => {
 
   return (
     <div className="Store">
-      <h2 className='Title'>Gold Market | 💰{user.gold}</h2>
+      <h1 className="Title">You have 💰{user.gold} ⏬</h1>
       <div className="Store-body">
         {/* HATS */}
         <h2>Hats</h2>
@@ -49,7 +49,7 @@ const Store = ({ userItems, allItems, user }) => {
                     className="Store-item-thumbnail"
                     title={hat.name}
                   />
-                  <h3 className="Store-item-owned-SOLD">SOLD OUT!</h3>
+                  <h3 className="Store-item-owned-SOLD">OWNED</h3>
                 </button>
               ) : confirmPurchase === hat.id ? (
                 <ConfirmButton
@@ -79,7 +79,7 @@ const Store = ({ userItems, allItems, user }) => {
           {shirts.map((shirt) => (
             <div className="Store-item" key={shirt.id}>
               <>
-                <p className='Item-name'>{shirt.name}</p>
+                <p className="Item-name">{shirt.name}</p>
                 <p className="Item-price">💰{shirt.price}</p>
               </>
 
@@ -92,7 +92,7 @@ const Store = ({ userItems, allItems, user }) => {
                     className="Store-item-thumbnail"
                     title={shirt.name}
                   />
-                  <h3 className="Store-item-owned-SOLD">SOLD OUT!</h3>
+                  <h3 className="Store-item-owned-SOLD">OWNED</h3>
                 </button>
               ) : confirmPurchase === shirt.id ? (
                 <ConfirmButton
@@ -135,7 +135,7 @@ const Store = ({ userItems, allItems, user }) => {
                     className="Store-item-thumbnail"
                     title={pants.name}
                   />
-                  <h3 className="Store-item-owned-SOLD">SOLD OUT!</h3>
+                  <h3 className="Store-item-owned-SOLD">OWNED</h3>
                 </button>
               ) : confirmPurchase === pants.id ? (
                 <ConfirmButton
@@ -178,7 +178,7 @@ const Store = ({ userItems, allItems, user }) => {
                     className="Store-item-thumbnail"
                     title={boots.name}
                   />
-                  <h3 className="Store-item-owned-SOLD">SOLD OUT!</h3>
+                  <h3 className="Store-item-owned-SOLD">OWNED</h3>
                 </button>
               ) : confirmPurchase === boots.id ? (
                 <ConfirmButton
@@ -221,7 +221,7 @@ const Store = ({ userItems, allItems, user }) => {
                     className="Store-item-thumbnail"
                     title={weapon.name}
                   />
-                  <h3 className="Store-item-owned-SOLD">SOLD OUT!</h3>
+                  <h3 className="Store-item-owned-SOLD">OWNED</h3>
                 </button>
               ) : confirmPurchase === weapon.id ? (
                 <ConfirmButton

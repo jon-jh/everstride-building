@@ -6,6 +6,10 @@ export const userName = "Jon Hiebert";
 export let accessToken = "";
 
 export async function newAccessToken() {
+  console.log(
+    "➡️ newAccessToken used .env key, RETRIEVED NEW ACCESS TOKEN for " +
+      JSON.stringify({ userName })
+  );
   try {
     const response = await fetch("https://www.strava.com/oauth/token", {
       method: "post",

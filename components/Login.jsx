@@ -3,11 +3,14 @@ import "./Login.css";
 import { useState } from "react";
 
 const Login = () => {
+  console.log("🟠 HOME app>page.jsx. username cookie is not set. SHOW LOGIN.");
+
   // Usestate for the form...
   const [username, setUsername] = useState("");
   const [loading, setLoading] = useState(false);
 
-  // Strava data is loaded inside this handleLogin block by api/login.js before opening the home page.
+  // Strava data is loaded inside this handleLogin block by pages/api/login.js before opening the home page.
+
   const handleLogin = async () => {
     setLoading(true);
     try {
@@ -32,18 +35,18 @@ const Login = () => {
   return (
     <div className="Login">
       <select value={username} onChange={(e) => setUsername(e.target.value)}>
-        <option value="">Saved Users</option>
-        <option value="Kyle McParland">Kyle McParland</option>
-        <option value="Jon Hiebert">Jon Hiebert</option>
-        <option value="Ben Hallam">Ben Hallam</option>
+        <option value="">Choose Player</option>
+        <option value="Kyle McParland">Kyle - Everstride Only</option>
+        <option value="Jon Hiebert">Jon - With Phone App</option>
+        <option value="Ben Hallam">Ben - Everstride Only</option>
       </select>
       <button onClick={handleLogin} disabled={!username}>
-        Login
+        Choose
       </button>
 
       <div className="Loading">{loading && <h1>Loading</h1>}</div>
     </div>
   );
 };
-// This is the login menu in the nav bar. (moved out of nav to screen center now)
+
 export default Login;

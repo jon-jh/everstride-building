@@ -9,7 +9,7 @@ export default async function addFriend(req, res) {
 
   try {
     console.log(
-      "addFriend adding user with ID " + userId2 + " to user ID " + userId1
+      "✅ addFriend adding user with ID " + userId2 + " to user ID " + userId1
     );
     await db.query(
       "INSERT INTO user_friends (user_id_1, user_id_2) VALUES ($1, $2)",

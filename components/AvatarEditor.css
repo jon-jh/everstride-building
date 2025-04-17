@@ -3,24 +3,20 @@
   text-align: center;
   justify-content: flex-end;
   height: inherit;
-
   background-color: #dfd9d0;
-
   font-family: "Pixelify Sans", serif;
   font-optical-sizing: auto;
   font-weight: 600;
-  font-style: normal;
   font-size: 25px;
 }
 
+/* Avatar */
 .avatar-display {
-  position: relative;
-  display: inline-block;
-  width: auto;
   position: absolute;
   top: 0;
   left: 0;
-
+  width: auto;
+  display: inline-block;
   pointer-events: none;
 }
 
@@ -28,78 +24,70 @@
   justify-self: center;
 }
 
-.equipment-category h5 {
-  margin-bottom: 5px;
-}
-
+/* Equipment */
 .equipment-layer {
   position: absolute;
   top: 0;
   left: 0;
 }
 
-.hat {
-  z-index: 2; /* Hat should be above the base avatar */
+.equipment-category h5 {
+  margin-bottom: 5px;
 }
 
-.shirt {
-  z-index: 3; /* Shirt is in front of hat, pants, and boots */
+.equipment-category button {
+  margin: 1px 2px;
+  border: 2px solid burlywood;
+  background-color: #f3f0eb;
+  border-radius: 10px;
+  z-index: 51;
 }
 
-.pants {
-  z-index: 0; /* Pants are behind the shirt */
-}
-
-.boots {
-  z-index: 1; /* Boots are behind the pants */
-}
-
-.weapon {
-  z-index: 4; /* Weapon should be in front of all the other equipment */
+.equipment-category button:hover {
+  box-shadow: 3px 3px 0px rgb(125, 125, 125);
+  background-color: white;
 }
 
 .equipment-selection {
-  /* margin-top: 20px; */
   z-index: 4;
   height: 100%;
   display: flex;
   flex-direction: column;
   overflow-y: auto;
-  /* gap: 20px; */
   width: 55%;
 }
 
-/* .equipment-category {
-  margin-bottom: 15px;
-} */
-
 .equipment-thumbnail {
-  width: 100px;
+  width: 110px;
   height: auto;
   cursor: pointer;
 }
-.equipment-category button {
-  border: solid #a89e91 2px;
-  border-radius: 10px;
-  margin: 1px;
-  background-color: #b9b2a7;
 
-  z-index: 51;
+/* Equipment Layers */
+.hat {
+  z-index: 2; /* Hat above base avatar */
 }
 
-.equipment-category button:hover {
-  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.103);
+.shirt {
+  z-index: 3; /* Shirt above hat, pants, and boots */
 }
 
-.equipment-thumbnail:hover {
-  opacity: 0.8;
+.pants {
+  z-index: 0; /* Pants behind the shirt */
+}
+
+.boots {
+  z-index: 1; /* Boots behind the pants */
+}
+
+.weapon {
+  z-index: 4; /* Weapon in front of all equipment */
 }
 
 .equip-button {
   font-size: 1.2em;
-  margin-top: 40px;
+  margin: 40px 0;
   padding: 10px;
-  margin-bottom: 40px;
   align-self: center;
   width: 85%;
   background-color: rgba(255, 255, 255, 0.525);
@@ -113,6 +101,7 @@
   background-color: rgb(255, 255, 255);
 }
 
+/* Color Buttons */
 button[title="base"],
 button[title="blue"],
 button[title="green"],
@@ -125,23 +114,9 @@ button[title="turquoise"],
 button[title="yellow"] {
   color: transparent;
   width: 70px;
+  height: 25px;
   border: 1px solid lightgray;
   border-radius: 5px;
   gap: 0;
-  height: 25px;
-  cursor: pointer; /* Added cursor style for hover effect */
-}
-
-button[title="base"]:hover,
-button[title="blue"]:hover,
-button[title="green"]:hover,
-button[title="limegreen"]:hover,
-button[title="orange"]:hover,
-button[title="pink"]:hover,
-button[title="purple"]:hover,
-button[title="red"]:hover,
-button[title="turquoise"]:hover,
-button[title="yellow"]:hover {
-  opacity: 0.8; /* Reduced opacity on hover for a visual effect */
-  background-color: rgba(0, 0, 0, 0.1); /* Optional: background color change on hover */
+  cursor: pointer;
 }
