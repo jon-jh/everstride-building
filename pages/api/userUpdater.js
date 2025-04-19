@@ -55,7 +55,7 @@ export default async function userUpdater(req, res) {
       return res.status(200).json({ message: "Skipped (prevent decrease)" });
     }
 
-    const goldEarned = Math.round(parseFloat(distance / 2)); // Gold earned should match the added distance
+    const goldEarned = Math.round(parseFloat(distance / 3)); // Gold earned should match the added distance
 
     const updateTotalDistanceQuery = `
       UPDATE users

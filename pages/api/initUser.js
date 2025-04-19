@@ -54,7 +54,7 @@ export default async function initUser(req, res) {
       }
 
       const goldEarned = Math.round(
-        (newTotalDistance - last_total_distance) / 2
+        (newTotalDistance - last_total_distance) / 3
       );
 
       const updateTotalDistanceQuery = `

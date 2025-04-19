@@ -21,7 +21,7 @@ export default async function updateTotalDistance(req, res) {
     // Set last_total_distance to 0 if it's not set yet. Prevents the gold duplication issue.
 
     const lastTotalDistance = user.last_total_distance || 0;
-    const goldEarned = Math.round((totalDistance - lastTotalDistance) / 2);
+    const goldEarned = Math.round((totalDistance - lastTotalDistance) / 3);
 
     const updateQuery = `
       UPDATE users
