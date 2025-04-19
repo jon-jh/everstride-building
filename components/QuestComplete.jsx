@@ -35,12 +35,7 @@ const QuestComplete = ({ currentQuest }) => {
     return randomChance < 0.7; // 70% chance to return true, 30% chance to return false
   };
 
-  async function completeCurrentQuest(
-    userQuestId,
-    userId,
-    updatedUserGold
-  ) {
-
+  async function completeCurrentQuest(userQuestId, userId, updatedUserGold) {
     const outcome = determineOutcome;
 
     if (outcome) {
@@ -71,10 +66,10 @@ const QuestComplete = ({ currentQuest }) => {
         }));
       }
 
-      // Reload the page after 5 seconds...
+      // Reload the page after 10 seconds...
       setTimeout(() => {
         window.location.reload();
-      }, 5000);
+      }, 10000);
     } else {
       console.error(result.message);
     }
@@ -85,17 +80,15 @@ const QuestComplete = ({ currentQuest }) => {
       {/* Display choices after quest is completed / Display results after option is selected */}
       {!resultsScreen.message ? (
         <div className="QuestComplete-choice">
-          <b className="QuestComplete-congrats">Quest Completed!</b>
-          <i className="QuestComplete-description">{result_description}</i>
+          <span className="QuestComplete-congrats">Quest Complete!</span>
+          <span className="QuestComplete-description">
+            {result_description}
+          </span>
           <div className="QuestComplete-buttons">
             <button
               className="QuestComplete-button"
               onClick={() =>
-                completeCurrentQuest(
-                  userQuestId,
-                  userId,
-                  updatedUserGold
-                )
+                completeCurrentQuest(userQuestId, userId, updatedUserGold)
               }
             >
               {option_1}
@@ -103,11 +96,7 @@ const QuestComplete = ({ currentQuest }) => {
             <button
               className="QuestComplete-button"
               onClick={() =>
-                completeCurrentQuest(
-                  userQuestId,
-                  userId,
-                  updatedUserGold
-                )
+                completeCurrentQuest(userQuestId, userId, updatedUserGold)
               }
             >
               {option_2}
@@ -116,11 +105,14 @@ const QuestComplete = ({ currentQuest }) => {
         </div>
       ) : (
         <div className="QuestComplete-choice">
-          <b className="QuestComplete-congrats">{resultsScreen.message}</b>
-          <b className="QuestComplete-result">
-            {resultsScreen.gold && `You receive 💰${resultsScreen.gold} gold!!`}
-          </b>
-          <i>Starting new quest in 5 seconds...</i>
+          <span className="QuestComplete-congrats">
+            {resultsScreen.message}
+          </span>
+          <span className="QuestComplete-result">
+            {resultsScreen.gold &&
+              `You found 💰${resultsScreen.gold} bonus gold!!`}
+          </span>
+          <i>To the next zone in 10 seconds!!</i>
         </div>
       )}
     </div>

@@ -3,18 +3,24 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.QuestComplete-choice i {
+  padding-top: 1em;
 }
 
 .QuestComplete-congrats {
-  font-size: 1.5em;
-  padding-bottom: 0.5em;
+  font-family: "Jacquard 12", serif;
+  font-size: 27px;
+  padding-bottom: 1em;
 }
 
 .QuestComplete-buttons {
   display: flex;
   width: 100%;
   justify-content: space-around;
-
   padding-top: 1em;
 }
 
@@ -24,8 +30,10 @@
 }
 
 .QuestComplete-result {
-  font-size: larger;
-  padding: 1em;
+  font-size: 26px;
+  padding: 0em;
+  color: aqua;
+  background-color: black;
 }
 
 @media (max-width: 999px) {

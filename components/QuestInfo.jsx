@@ -11,7 +11,7 @@ const QuestInfo = ({ distance_today, goal_distance, currentQuest }) => {
         <div className="QuestInfo-body">
           <b className="QuestInfo-title">Current Quest: {quest_name}</b>
           <p className="QuestInfo-description">{description}</p>
-          Keep going! Only {goal_distance - distance_today}m more to go!
+          Walk {goal_distance - distance_today}m more to find the bonus!!
         </div>
       ) : (
         <div>
