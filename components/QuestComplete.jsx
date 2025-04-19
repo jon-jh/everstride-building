@@ -24,10 +24,10 @@ const QuestComplete = ({ currentQuest }) => {
   const questId = currentQuest.quest_id;
   const userId = currentQuest.user_id;
 
-  // Initialize user gold for updating...
+  // Random Gold Reward
   let updatedUserGold = currentQuest.user_gold;
-  const min = questId * 100;
-  const max = min + 100;
+  const min = questId * (Math.random() < 0.5 ? 200 : 270);
+  const max = min + (Math.random() < 0.5 ? 1500 : 3100);
   const randomGoldReward = Math.floor(Math.random() * (max - min + 1) + min);
 
   // Dice roll for quest rewards...
@@ -49,7 +49,6 @@ const QuestComplete = ({ currentQuest }) => {
     updatedUserGold,
     odds
   ) {
-
     // const outcome = determineOutcome(odds);
     const outcome = determineOutcome;
 
