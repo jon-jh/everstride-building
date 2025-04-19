@@ -13,8 +13,6 @@ const QuestComplete = ({ currentQuest }) => {
   const {
     option_1,
     option_2,
-    odds1,
-    odds2,
     result_description,
     success_message,
     failure_message,
@@ -30,12 +28,6 @@ const QuestComplete = ({ currentQuest }) => {
   const max = min + (Math.random() < 0.5 ? 1500 : 3100);
   const randomGoldReward = Math.floor(Math.random() * (max - min + 1) + min);
 
-  // Dice roll for quest rewards...
-  // const determineOutcome = (odds) => {
-  //   const diceRoll = Math.floor(Math.random() * 100) + 1;
-  //   return odds >= diceRoll;
-  // };
-
   // New dice roll which removes the 'odds' dependancy from the database. Much easier to maintain / adjust.
 
   const determineOutcome = () => {
@@ -46,10 +38,9 @@ const QuestComplete = ({ currentQuest }) => {
   async function completeCurrentQuest(
     userQuestId,
     userId,
-    updatedUserGold,
-    odds
+    updatedUserGold
   ) {
-    // const outcome = determineOutcome(odds);
+
     const outcome = determineOutcome;
 
     if (outcome) {
@@ -103,8 +94,7 @@ const QuestComplete = ({ currentQuest }) => {
                 completeCurrentQuest(
                   userQuestId,
                   userId,
-                  updatedUserGold,
-                  odds1
+                  updatedUserGold
                 )
               }
             >
@@ -116,8 +106,7 @@ const QuestComplete = ({ currentQuest }) => {
                 completeCurrentQuest(
                   userQuestId,
                   userId,
-                  updatedUserGold,
-                  odds2
+                  updatedUserGold
                 )
               }
             >

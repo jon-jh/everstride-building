@@ -15,8 +15,6 @@ export async function fetchUserCurrentQuest(name) {
          quests.result_description,
          option_1,
          option_2,
-         option_1_odds AS odds1,
-         option_2_odds AS odds2,
          success_message,
          failure_message
        FROM user_quests
