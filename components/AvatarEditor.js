@@ -101,7 +101,13 @@ const AvatarEditor = ({
 
   return (
     <div className="avatar-editor-container">
-      <h3 className="avatar-editor-title">Player Editor ⏬</h3>
+      <h3 className="avatar-editor-title">
+        Player Editor ⏬
+        {/* Equip Button */}
+        <button className="equip-button" onClick={handleEquip}>
+          Equip
+        </button>
+      </h3>
 
       {/* Display the Avatar */}
       <Avatar
@@ -223,11 +229,6 @@ const AvatarEditor = ({
             </button>
           ))}
         </div>
-
-        {/* Equip Button */}
-        <button className="equip-button" onClick={handleEquip}>
-          Equip
-        </button>
       </div>
     </div>
   );

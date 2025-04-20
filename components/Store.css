@@ -6,12 +6,9 @@
   overflow-y: auto;
   background-color: #dfd9d0;
   font-family: "Pixelify Sans", serif;
+  font-size: 1em;
   font-optical-sizing: auto;
   font-weight: 600;
-}
-
-h2.Title {
-  margin-top: 2.5em;
 }
 
 /* Store Layout */
@@ -33,13 +30,14 @@ h2.Title {
   padding: 0px;
   width: 8em;
   margin: 0 2px;
-  border: 2px solid burlywood;
+  border: 3px solid lightslategrey;
   background-color: #f3f0eb;
-  border-radius: 10px;
+  border-radius: 4px;
+  box-shadow: 3px 3px 0px rgb(125, 125, 125);
 }
 
 .Store-item:hover {
-  box-shadow: 3px 3px 0px rgb(125, 125, 125);
+  box-shadow: 3px 3px 0px black;
   background-color: white;
 }
 
@@ -78,7 +76,6 @@ p.Item-price {
 
 .Store-item-owned {
   background-color: #696361;
-  border: 0px;
   border-radius: 15px;
 }
 
