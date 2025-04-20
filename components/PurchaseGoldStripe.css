@@ -1,9 +1,10 @@
 .PurchaseGoldStripe {
+  font-family: "Pixelify Sans", serif;
+  font-optical-sizing: auto;
   display: flex;
   align-items: center;
-  justify-content: space-evenly; /* Distribute space evenly between ad and button */
+  justify-content: space-evenly;
   width: 100%;
-
   background-color: #dfd9d0;
   border: solid #554c49 8px;
   border-radius: 15px;
@@ -29,11 +30,22 @@
   min-width: 350px;
   padding: 10px 20px;
   cursor: pointer;
-  z-index:1;
+  z-index: 1;
+
+  font-family: "Pixelify Sans", serif;
+  font-size: 1em;
+  font-optical-sizing: auto;
+  border: none;
+  background-color: #f3f0eb;
+  border-radius: 4px;
+  box-shadow: 3px 3px 0px rgb(125, 125, 125);
 }
+
+.PurchaseGoldStripe-button:hover {
+  background-color: white;
+}
+
 .Store-Stripe-Banner {
   border-radius: 15px;
-
   font-family: Arial, Helvetica, sans-serif;
 }
-

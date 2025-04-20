@@ -9,7 +9,7 @@
   scrollbar-width: none; /* Firefox */
 }
 
-.container h1 {
+.container h1, .container button {
   margin-top: 0;
   text-align: center;
 
@@ -32,23 +32,22 @@
 .users {
   display: flex;
   flex-wrap: wrap;
-  /* gap: 15px; */
   justify-content: center;
 }
 
 .card {
   margin-top: 7px;
   background-color: #f3f0eb;
-  border-radius: 10px;
   display: flex;
   flex-direction: row;
-  border: 3px solid burlywood;
+  border: 3px solid lightslategrey;
+  border-radius: 4px;
+  box-shadow: 3px 3px 0px rgb(125, 125, 125);
   padding: 9px;
   width: 90%;
 }
 .card:hover {
   background-color: white;
-  box-shadow: 3px 3px 0px rgb(125, 125, 125);
 }
 .details {
   padding: 10px;
@@ -67,23 +66,22 @@
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+  width: 35%;
 }
 
 .buttonsContainer button {
-  font-size: 17px;
+  font-size: 1em;
   height: 100%;
   width: 100%;
-  border-radius: 10px;
+  border-radius: 4px;
 }
 
 .addFriend:not(:disabled):hover {
   background-color: rgb(195, 231, 190);
-  border-radius: 10px;
   cursor: pointer;
 }
 
 .Remove:not(:disabled):hover {
   background-color: rgb(255, 111, 111);
-  border-radius: 10px;
   cursor: pointer;
 }

@@ -6,12 +6,12 @@ const PurchaseGoldStripe = () => {
   return (
     <div className="PurchaseGoldStripe">
       <div className="PurchaseGoldStripe-ad">
-        <h3>Purchase 1000 Gold 💰 for only $5!</h3>
+        <h3>Purchase 1000💰 for only five dollars!</h3>
       </div>
       <a href="/purchase-gold" className="PurchaseGoldStripe-link">
         <button className="PurchaseGoldStripe-button">
           <FontAwesomeIcon icon={faCartShopping} size="2x" />
-          <h2 className='Stripe-button'>Secure payment with Stripe</h2>
+          <h2 className="Stripe-button">Buy - Demo Mode</h2>
         </button>
       </a>
     </div>

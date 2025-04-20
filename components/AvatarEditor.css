@@ -13,15 +13,37 @@
 /* Avatar */
 .avatar-display {
   position: absolute;
-  top: 0;
-  left: 0;
+  bottom: 1em;
+  left: 0.5em;
   width: auto;
+  height: 100%;
   display: inline-block;
   pointer-events: none;
 }
 
+/* Equip button placed within title div */
+
 .avatar-editor-title {
-  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0.5em;
+  z-index: 7;
+}
+.equip-button {
+  font-family: "Pixelify Sans", serif;
+  font-size: 1.2em;
+  width: 100%;
+  border: none;
+  background-color: #f3f0eb;
+  border-radius: 4px;
+  box-shadow: 3px 3px 0px rgb(125, 125, 125);
+}
+
+.equip-button:hover {
+  cursor: pointer;
+  opacity: 1;
+  background-color: rgb(255, 255, 255);
 }
 
 /* Equipment */
@@ -32,19 +54,23 @@
 }
 
 .equipment-category h5 {
-  margin-bottom: 5px;
+  height: fit-content;
+  margin: 0;
+  padding-top: 5px;
 }
 
 .equipment-category button {
-  margin: 1px 2px;
-  border: 2px solid burlywood;
+  margin: 0px 2px;
+  margin-bottom: 1em;
+  border: 3px solid lightslategrey;
   background-color: #f3f0eb;
-  border-radius: 10px;
+  border-radius: 4px;
+  box-shadow: 3px 3px 0px rgb(125, 125, 125);
   z-index: 51;
 }
 
 .equipment-category button:hover {
-  box-shadow: 3px 3px 0px rgb(125, 125, 125);
+  box-shadow: 3px 3px 0px black;
   background-color: white;
 }
 
@@ -84,23 +110,6 @@
   z-index: 4; /* Weapon in front of all equipment */
 }
 
-.equip-button {
-  font-size: 1.2em;
-  margin: 40px 0;
-  padding: 10px;
-  align-self: center;
-  width: 85%;
-  background-color: rgba(255, 255, 255, 0.525);
-  border: 1px solid lightgray;
-  border-radius: 5px;
-}
-
-.equip-button:hover {
-  cursor: pointer;
-  opacity: 1;
-  background-color: rgb(255, 255, 255);
-}
-
 /* Color Buttons */
 button[title="base"],
 button[title="blue"],
@@ -116,7 +125,8 @@ button[title="yellow"] {
   width: 70px;
   height: 25px;
   border: 1px solid lightgray;
-  border-radius: 5px;
+  border-radius: 4px;
   gap: 0;
+  margin: 0 2px;
   cursor: pointer;
 }
