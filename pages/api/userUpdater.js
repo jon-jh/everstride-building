@@ -7,13 +7,17 @@ export default async function userUpdater(req, res) {
 
   const { userName, distance } = req.body;
 
+  if (!userName || !distance) {
+    return res.status(400).json({ message: "Missing required fields" });
+  }
+
   try {
+    // Fetch user details from the database
     const selectUserQuery = `
-      SELECT name, distance_travelled_today, last_total_distance, total_distance_travelled, gold, last_travelled_today, accumulated_distance
+      SELECT name, distance_travelled_today, total_distance_travelled, gold, accumulated_distance
       FROM users
       WHERE name = $1;
     `;
-
     const result = await db.query(selectUserQuery, [userName]);
     const user = result.rows[0];
 
@@ -21,73 +25,58 @@ export default async function userUpdater(req, res) {
       return res.status(404).json({ message: "User not found" });
     }
 
+    // Destructure user data
     const {
       name,
       distance_travelled_today,
-      last_total_distance,
       total_distance_travelled,
       gold,
-      last_travelled_today,
       accumulated_distance,
     } = user;
 
+    // Calculate new values
+    const parsedDistance = parseFloat(distance);
     const newDistanceTravelledToday =
-      parseFloat(distance_travelled_today) + parseFloat(distance);
-
-    const updateDistanceQuery = `
-      UPDATE users
-      SET distance_travelled_today = $1
-      WHERE name = $2;
-    `;
-
-    await db.query(updateDistanceQuery, [newDistanceTravelledToday, name]);
-    console.log(
-      `🔵 Distance updated to ${newDistanceTravelledToday} for user ${name}`
-    );
-
-    const newTotalDistance = total_distance_travelled + parseFloat(distance);
-
+      parseFloat(distance_travelled_today) + parsedDistance;
+    const newTotalDistance = total_distance_travelled + parsedDistance;
+    const goldEarned = Math.round(parsedDistance / 3);
     const newAccumulatedDistance =
-      parseFloat(distance_travelled_today) + parseFloat(distance);
+      newDistanceTravelledToday > accumulated_distance
+        ? newDistanceTravelledToday
+        : accumulated_distance; // Prevent decrease in accumulated distance
 
-    if (newAccumulatedDistance < accumulated_distance) {
-      console.log(`🔴 userUpdater ${name}: Skipped (prevent decrease)`);
-      return res.status(200).json({ message: "Skipped (prevent decrease)" });
-    }
-
-    const goldEarned = Math.round(parseFloat(distance / 3)); // Gold earned should match the added distance
-
-    const updateTotalDistanceQuery = `
+    // Update user data in the database
+    const updateUserQuery = `
       UPDATE users
-      SET total_distance_travelled = $1,
-          last_total_distance = $2,
+      SET distance_travelled_today = $1,
+          total_distance_travelled = $2,
           gold = gold + $3,
-          last_travelled_today = $4,
-          accumulated_distance = $5
-      WHERE name = $6;
+          accumulated_distance = $4
+      WHERE name = $5;
     `;
-
-    await db.query(updateTotalDistanceQuery, [
-      newTotalDistance,
-      newAccumulatedDistance,
-      goldEarned,
+    await db.query(updateUserQuery, [
       newDistanceTravelledToday,
+      newTotalDistance,
+      goldEarned,
       newAccumulatedDistance,
       name,
     ]);
 
-    console.log(`\n🔵 userUpdater ${name}:
-      Last Total Distance: ${last_total_distance}
-      New Total Distance: ${newTotalDistance}
-      Gold increased amount: ${goldEarned}
-      Distance Travelled Today: ${newDistanceTravelledToday}
-      Last Travelled Today updated to: ${newDistanceTravelledToday}
-      Accumulated Distance: ${newAccumulatedDistance}`);
+    // Log updates for debugging
+    console.log(`
+      🔵 userUpdater ${name}:
+      - Distance Within Quest: ${distance_travelled_today} -> ${newDistanceTravelledToday}
+      - Total Distance: ${total_distance_travelled} -> ${newTotalDistance}
+      - Gold Earned: +${goldEarned}
+      - Accumulated Distance: ${accumulated_distance} -> ${newAccumulatedDistance}
+    `);
 
-    // Send the goldEarned value in the response to the client / frontend.
+    // Return success response
     res.status(200).json({ message: "Success", goldEarned });
   } catch (error) {
-    console.error("⛔ Error updating user:", error);
-    res.status(500).json({ message: "Internal Server Error" });
+    console.error("⛔ Error updating user:", error.message);
+    res
+      .status(500)
+      .json({ message: "Internal Server Error", error: error.message });
   }
 }
