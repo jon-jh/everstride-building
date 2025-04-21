@@ -66,10 +66,10 @@ const QuestComplete = ({ currentQuest }) => {
         }));
       }
 
-      // Reload the page after 10 seconds...
+      // Reload the page after 7 seconds...
       setTimeout(() => {
         window.location.reload();
-      }, 10000);
+      }, 7000);
     } else {
       console.error(result.message);
     }
@@ -112,7 +112,7 @@ const QuestComplete = ({ currentQuest }) => {
             {resultsScreen.gold &&
               `You found 💰${resultsScreen.gold} bonus gold!!`}
           </span>
-          To the next zone in 10 seconds!!
+          To the next zone in 7 seconds
         </div>
       )}
     </div>
