@@ -17,13 +17,13 @@
 }
 
 .LocationDiv {
-  z-index: 1;
+  z-index: 0;
 }
 .StepVisualizer-progress {
   z-index: 0;
 }
 .StepVisualizer-character {
-  z-index: 1;
+  z-index: 0;
   position: absolute;
   top: 44%;
   transform: translate(-50%, -50%);
@@ -31,7 +31,7 @@
   margin-right: 3em;
 }
 .AddProgressDiv {
-  z-index: 2;
+  z-index: 1;
 }
 
 .AddProgressDiv input,
