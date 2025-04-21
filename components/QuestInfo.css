@@ -22,17 +22,11 @@
 
 .QuestInfo-title {
   font-family: "Jacquard 12", serif;
-  font-size: 27px;
+  font-size: 1.2em;
 }
 
-@media (max-width: 999px) {
-  .QuestInfo-body {
-    font-size: calc(0.5rem + 1vw);
-  }
-  .QuestInfo-title {
-    font-size: calc(1rem + 1vw);
-  }
+@media (max-width: 900px) {
   .QuestInfo-description {
-    font-size: calc(0.5rem + 1vw);
+    font-size: 15px;
   }
 }

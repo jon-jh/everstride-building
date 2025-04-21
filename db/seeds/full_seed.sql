@@ -54,7 +54,7 @@ VALUES
     ('The Dance of the Emberflame', 
     'Prepare yourself for the fiery trials within the Ashen Peaks. Perform the sacred dance of the Emberflame, completing 3,000 steps through volcanic terrain to reach the Heart of the Firestorm and become the Emberflame Dancer!',
     3000, 'After your final step, the fire surrounding you subsides, revealing a glowing emberstone at the peak. Before you can approach, a fiery guardian appears, its molten eyes staring you down.',
-    'Submit to the guardian', 'Defeat the guardian', 'The guardian grants you the Emberstone, leaving you with newfound wisdom.', 'The battle is hard-fought, but you succumb to the flames, your dance unfinished.'),
+    'Submit to the guardian', 'Battle the guardian', 'The guardian grants you the Emberstone, leaving you with newfound wisdom.', 'The battle is hard-fought, but you succumb to the flames, your dance unfinished.'),
     ('The Quest for the Frostbound Crown', 
     'Brave Frostwanderer, traverse the frozen wastes of the Glacial Expanse. Complete 3,500 steps through icy tundras and blizzards to reach the Throne of the Frost King and claim the legendary Frostbound Crown!',
     3500, 'As you arrive at the throne, a shimmering figure appears. The Frost King himself, guarding the crown, rises from the ice with a cold glare.',

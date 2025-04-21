@@ -11,31 +11,33 @@
   background-position: center;
   background-repeat: no-repeat;
   overflow: hidden;
-  font-optical-sizing: auto;
-  font-style: normal;
   font-size: calc(0.6rem + 1.1vh);
+  font-family: "Pixelify Sans", serif;
+  font-weight: 500;
 }
 
-/* Arranged in order of z-index */
-.LocationDiv,
+.LocationDiv {
+  z-index: 1;
+}
 .StepVisualizer-progress {
   z-index: 0;
 }
 .StepVisualizer-character {
-  z-index: 0;
+  z-index: 1;
   position: absolute;
   top: 44%;
   transform: translate(-50%, -50%);
   height: 100%;
   margin-right: 3em;
 }
-.AddProgressDiv{
-  z-index: 1;
-} 
-/* Arranged in order of z-index */
+.AddProgressDiv {
+  z-index: 2;
+}
 
 .AddProgressDiv input,
 .AddProgressDiv button {
+  font-family: "Pixelify Sans", serif;
+  font-weight: 500;
   transition: 0.5s ease-out;
   width: 7em;
   height: 2em;
@@ -66,8 +68,7 @@
   justify-content: center;
   align-items: center;
   background-color: #dfd9d0;
-  width: fit-content;
-  min-width: fit-content;
+  width: 17.9em;
   height: 2em;
   padding: 5px;
   border-radius: 12px;

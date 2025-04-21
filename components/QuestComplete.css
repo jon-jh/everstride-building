@@ -1,47 +1,56 @@
 .QuestComplete-choice {
+  height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 1.2em;
 }
 
-.QuestComplete-choice i {
-  padding-top: 1em;
+.QuestComplete-description {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
 }
 
 .QuestComplete-congrats {
-  font-family: "Jacquard 12", serif;
-  font-size: 27px;
-  padding-bottom: 1em;
+  font-size: 1.2em;
 }
 
 .QuestComplete-buttons {
   display: flex;
-  width: 100%;
+  width: 65%;
   justify-content: space-around;
-  padding-top: 1em;
+  padding-top: 0.5em;
 }
 
 .QuestComplete-button {
-  font-size: larger;
+  font-family: "Pixelify Sans", serif;
+  font-size: 1.2em;
   padding: 0.5em;
+  border: none;
+  background-color: #f3f0eb;
+  border-radius: 4px;
+  box-shadow: 3px 3px 0px rgb(125, 125, 125);
+}
+
+.QuestComplete-button:hover {
+  cursor: pointer;
+  opacity: 1;
+  background-color: rgb(255, 255, 255);
 }
 
 .QuestComplete-result {
-  font-size: 26px;
-  padding: 0em;
-  color: aqua;
-  background-color: black;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  font-size: 1.2em;
+  color: blueviolet;
+  background-color: transparent;
 }
 
-@media (max-width: 999px) {
+@media (max-width: 900) {
   .QuestComplete-description {
     font-size: 15px;
-  }
-  .QuestComplete-congrats {
-    font-size: 1.2em;
   }
   .QuestComplete-button {
     font-size: large;

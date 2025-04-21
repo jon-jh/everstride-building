@@ -52,12 +52,12 @@ export default function StepVisualizer({
         <div className="StepVisualizer-textbackground">
           {user_tag === "current_user" ? (
             <p>
-              Today you have travelled {distance_travelled_today}/
+              You have travelled {distance_travelled_today}/
               {goal_distance}m
             </p>
           ) : (
             <p>
-              Today {name} has travelled {distance_travelled_today}m
+              {name} has travelled {distance_travelled_today}m
             </p>
           )}
         </div>

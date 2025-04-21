@@ -112,7 +112,7 @@ const QuestComplete = ({ currentQuest }) => {
             {resultsScreen.gold &&
               `You found 💰${resultsScreen.gold} bonus gold!!`}
           </span>
-          <i>To the next zone in 10 seconds!!</i>
+          To the next zone in 10 seconds!!
         </div>
       )}
     </div>

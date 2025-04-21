@@ -73,7 +73,7 @@ svg text {
 }
 
 /* Mobile-specific adjustments */
-@media (max-width: 850px) {
+@media (max-width: 900px) {
   .location-image {
     width: 20vw;
     height: 20vw;
