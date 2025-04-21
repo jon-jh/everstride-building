@@ -4,6 +4,7 @@ import { newStravaLogic } from "@/pages/api/newStravaLogic";
 
 const AddProgressForm = ({ user, isDisabled }) => {
   const [distance, setDistance] = useState("");
+  const [goldEarned, setGoldEarned] = useState(null);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -17,8 +18,13 @@ const AddProgressForm = ({ user, isDisabled }) => {
           distance: parseFloat(distance),
         }),
       });
+
+      // Adjusted the userUpdater backend to also send the goldEarned in the response.
       const result = await response.json();
-      window.location.href = "/";
+      setGoldEarned(result.goldEarned)
+      setTimeout(() => {
+      window.location.href = "/";  
+      }, 2000);
     } catch (error) {
       console.error("Error updating distance:", error);
     }
@@ -49,6 +55,11 @@ const AddProgressForm = ({ user, isDisabled }) => {
           Check Strava
         </button>
       </form>
+      {goldEarned !== null && (
+        <div className="gold-earned-notification">
+          You walked {distance} steps! <br /> You got {goldEarned} gold!
+        </div>
+      )}
     </div>
   );
 };

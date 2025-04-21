@@ -84,7 +84,8 @@ export default async function userUpdater(req, res) {
       Last Travelled Today updated to: ${newDistanceTravelledToday}
       Accumulated Distance: ${newAccumulatedDistance}`);
 
-    res.status(200).json({ message: "Success" });
+    // Send the goldEarned value in the response to the client / frontend.
+    res.status(200).json({ message: "Success", goldEarned });
   } catch (error) {
     console.error("⛔ Error updating user:", error);
     res.status(500).json({ message: "Internal Server Error" });

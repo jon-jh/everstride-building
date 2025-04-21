@@ -44,7 +44,7 @@ export default function StepVisualizer({
         <div className="StepVisualizer-textbackground">
           <p>{location}</p>
           <p className="StepVisualizer-gold">
-            &nbsp;&nbsp;💰{userCharacter.gold}
+            💰{userCharacter.gold}
           </p>
         </div>
       </div>
@@ -55,6 +55,7 @@ export default function StepVisualizer({
               You have travelled {distance_travelled_today}/
               {goal_distance}m
             </p>
+            
           ) : (
             <p>
               {name} has travelled {distance_travelled_today}m
