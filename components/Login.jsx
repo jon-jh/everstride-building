@@ -8,9 +8,7 @@ const Login = () => {
   // Usestate for the form...
   const [username, setUsername] = useState("");
   const [loading, setLoading] = useState(false);
-
-  // Strava data is loaded inside this handleLogin block by pages/api/login.js before opening the home page.
-
+  
   const handleLogin = async () => {
     setLoading(true);
     try {
@@ -32,9 +30,9 @@ const Login = () => {
     <div className="Login">
       <select value={username} onChange={(e) => setUsername(e.target.value)}>
         <option value="">Choose Player</option>
-        <option value="Kyle McParland">Kyle - Everstride Only</option>
-        <option value="Jon Hiebert">Jon - With Phone App</option>
-        <option value="Ben Hallam">Ben - Everstride Only</option>
+        <option value="Kyle McParland">Kyle</option>
+        <option value="Jon Hiebert">Jon</option>
+        <option value="Ben Hallam">Ben</option>
       </select>
       <button onClick={handleLogin} disabled={!username}>
         Choose

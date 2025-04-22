@@ -2,7 +2,7 @@
 
 ### Check out the dev build here: [https://everstride.vercel.app/](https://everstride.vercel.app/)
 
-Everstride is a gamified fitness application built with Next.js that motivates users to achieve their step goals through DnD-inspired quests. By integrating the Strava API, the app translates daily steps into progress on an adventure map, where users can embark on dynamic quests to earn gold and customize their in-game Avatar with new equipment. Everstride's social features also allow users to add their friends and track their progress - all without distrupting their own. Additionally, the Stripe API lets users skip the run and make secure payments to purchase gold directly.
+Everstride is a gamified fitness app built with Next.js, where users complete DnD-inspired quests by reaching step goals. Progress earns gold to upgrade avatars with new gear, while social features let friends track each other’s journeys. Users can also purchase gold securely via Stripe integration for faster upgrades.
 
 ## Features
 
@@ -10,19 +10,11 @@ Everstride is a gamified fitness application built with Next.js that motivates u
 - **StepVisualizer:** At the center of the app is the StepVisualizer, which translates daily step counts into the avatar's position on the X-axis. The goal is to reach the star at the end of the quest.
 - **Avatar Customization:** Personalize your adventure by editing your avatar through the Avatar Editor.
 - **Gamified Decisions:** After completing a quest, users face random D&D-style events with interactive choices. Rolling a dice may reward users with gold.
-- **Real-time Updates:** Track step progress through the Strava API, with updates displayed dynamically on the quest map.
-- **Manual Step Input:** For users without Strava, manual step input ensures everyone can participate and enjoy the app.
 - **Social Connectivity:** Add friends to see their progress, maintain motivation, and foster friendly competition.
 - **Gold Economy:** Earn gold from quests and spend it in the Gold Market to unlock new equipment.
 - **Payment Integration:** Use Stripe to purchase gold directly with secure payments.
 
 ## Final Product
-
-_No Strava APP? No problem! Manually add your steps to progress on your quest!_
-!["Adding progress to StepVisualizer"](https://raw.githubusercontent.com/kylemcparland/everstride/refs/heads/main/media/1E-add-progress.gif "Adding progress to StepVisualizer")
-
-_With your Strava account connected, there is no need for manual updates - just visit the page and see how far you've reached in your quest!_
-!["Strava API implementation"](https://raw.githubusercontent.com/kylemcparland/everstride/refs/heads/main/media/8E-strava.png "Strava API implementation")
 
 _Customize your avatar to stand out from your friends!_
 !["Avatar editor menu"](https://raw.githubusercontent.com/kylemcparland/everstride/refs/heads/main/media/2E-avatar.png "Avatar editor menu")
