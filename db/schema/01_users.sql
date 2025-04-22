@@ -10,5 +10,3 @@ CREATE TABLE users (
     gold INT DEFAULT 0,
     colour VARCHAR(12)
 );
-
--- No password stored for dev/demo purposes.
