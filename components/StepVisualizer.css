@@ -16,8 +16,10 @@
   font-weight: 500;
 }
 
-.LocationDiv {
+.LocationDiv,
+.LocationP {
   z-index: 0;
+  width: 10em;
 }
 .StepVisualizer-progress {
   z-index: 0;
@@ -32,18 +34,11 @@
   margin-right: 3em;
 }
 
-.AddProgressDiv {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  z-index: 1;
-  position: relative;
-}
-
 .AddProgressDiv form {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  width: 100%;
 }
 
 .gold-earned-notification {
@@ -51,28 +46,41 @@
   top: calc(100% + 1em);
   font-family: "Pixelify Sans", serif;
   font-weight: 600;
-  color: #ffd700;;
+  color: #ffd700;
   background-color: black;
   padding: 10px;
   border-radius: 12px;
   text-align: center;
   z-index: 1;
 }
+.AddProgressDiv input {
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  text-align: right;
+  outline: none;
+  border: none;
+}
 
+.AddProgressDiv button {
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
 .AddProgressDiv input,
 .AddProgressDiv button {
   font-family: "Pixelify Sans", serif;
   font-weight: 500;
-  width: 6em;
+  width: 7em;
+  flex-grow: 1;
   transition: 0.5s ease-out;
   box-sizing: border-box;
-  border-radius: 5px;
   border: none;
+  font-size: calc(0.6rem + 1.1vh);
+  height: 2em;
 }
 
 .AddProgressDiv button:not(:disabled):hover {
   cursor: pointer;
-  background-color: white;
+  background-color: rgb(195, 231, 190);
   transition: 0s;
 }
 
@@ -91,7 +99,7 @@
   justify-content: center;
   align-items: center;
   background-color: #dfd9d0;
-  width: fit-content;
+  width: 14em;
   height: 2em;
   border-radius: 12px;
 }
@@ -104,10 +112,9 @@
 }
 
 .StepVisualizer-gold {
-  color: #ffd700;;
+  color: #ffd700;
   background-color: black;
-  padding-right:0.2em;
-  padding-left:0;
+  width: 4em;
   min-width: fit-content;
   height: 100%;
   border-radius: 12px;

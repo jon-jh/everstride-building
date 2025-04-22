@@ -42,20 +42,16 @@ export default function StepVisualizer({
     >
       <div className="LocationDiv">
         <div className="StepVisualizer-textbackground">
-          <p>{location}</p>
-          <p className="StepVisualizer-gold">
-            💰{userCharacter.gold}
-          </p>
+          <p className="LocationP">{location}</p>
+          <p className="StepVisualizer-gold">💰{userCharacter.gold}</p>
         </div>
       </div>
       <div className="StepVisualizer-progress">
         <div className="StepVisualizer-textbackground">
           {user_tag === "current_user" ? (
             <p>
-              You have travelled {distance_travelled_today}/
-              {goal_distance}m
+              You have travelled {distance_travelled_today}/{goal_distance}m
             </p>
-            
           ) : (
             <p>
               {name} has travelled {distance_travelled_today}m
@@ -66,10 +62,9 @@ export default function StepVisualizer({
 
       <div className="AddProgressDiv">
         <div className="StepVisualizer-textbackground">
-          <AddProgressForm user={userCharacter} isDisabled={!isMainUser}/>
+          <AddProgressForm user={userCharacter} isDisabled={!isMainUser} />
         </div>
       </div>
-
       <div
         className="StepVisualizer-character"
         style={{ left: `calc(${position}% - 5em)` }}

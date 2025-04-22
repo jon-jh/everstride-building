@@ -7,10 +7,8 @@ const Login = () => {
 
   // Usestate for the form...
   const [username, setUsername] = useState("");
-  const [loading, setLoading] = useState(false);
-  
+
   const handleLogin = async () => {
-    setLoading(true);
     try {
       await fetch("/api/login", {
         method: "POST",
@@ -21,8 +19,6 @@ const Login = () => {
       window.location.reload();
     } catch (error) {
       console.error("Error during login or initialization:", error);
-    } finally {
-      setLoading(false);
     }
   };
 
@@ -37,8 +33,6 @@ const Login = () => {
       <button onClick={handleLogin} disabled={!username}>
         Choose
       </button>
-
-      <div className="Loading">{loading && <h1>Loading</h1>}</div>
     </div>
   );
 };
