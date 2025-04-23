@@ -20,10 +20,10 @@ const AddProgressForm = ({ user, isDisabled }) => {
 
       // Adjusted the userUpdater backend to also send the goldEarned in the response.
       const result = await response.json();
-      setGoldEarned(result.goldEarned);
+      setGoldEarned(result.goldEarned || 0);
       setTimeout(() => {
         window.location.href = "/";
-      }, 4000);
+      }, 3000);
     } catch (error) {
       console.error("Error updating distance:", error);
     }
@@ -41,7 +41,7 @@ const AddProgressForm = ({ user, isDisabled }) => {
           Add Steps
         </button>
       </form>
-      {goldEarned !== null && (
+      {(goldEarned !== null && goldEarned !== 0) && (
         <div className="gold-earned-notification">
           You walked {distance} steps! <br /> You got {goldEarned} gold!
         </div>
