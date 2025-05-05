@@ -17,11 +17,11 @@
   /* Background settings */
   background-image: url("/assets/scenes/thefieldsoffrollicking.png");
   background-repeat: repeat-x;
-  background-size: cover;
+  background-size: 510%;
   background-position: left center;
 
   /* Animation */
-  animation: scrollBackground 230s linear infinite;
+  animation: scrollBackground 300s linear infinite;
 }
 
 /* Keyframes for scrolling effect */
