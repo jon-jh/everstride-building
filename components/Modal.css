@@ -1,6 +1,5 @@
 .Modal {
   z-index: 10;
-  border-radius: 15px;
   display: flex;
   position: absolute;
   justify-content: center;
@@ -11,10 +10,11 @@
   height: 75%;
   max-width: 900px;
   width: 80%;
-  
+
   box-shadow: 0 0 0 50vmax rgba(0, 0, 0, 0.7);
   background-color: whitesmoke;
   border: solid #554c49 8px;
+  border-radius: 15px;
 }
 
 .Modal-button {
@@ -26,11 +26,19 @@
   height: 1.5em;
   width: 1.5em;
   z-index: 101;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 3px 3px 0px rgb(125, 125, 125);
+}
+
+.Modal-button:hover {
+  background-color: rgb(255, 255, 255);
 }
 
 .Modal-content {
   height: 100%;
   width: 100%;
-
   background-color: #dfd9d0;
+  border-radius: 8px;
 }

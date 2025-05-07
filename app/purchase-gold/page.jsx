@@ -1,6 +1,7 @@
 "use client";
 
-import "components/NavBar.css";
+import Footer from "@/components/Footer";
+import "app/purchase-gold/page.css";
 import { useCallback } from "react";
 import { loadStripe } from "@stripe/stripe-js";
 import {
@@ -38,9 +39,11 @@ const PurchaseGold = () => {
           <EmbeddedCheckout />
         </EmbeddedCheckoutProvider>
       </div>
-      <h4>Simulate successful payment: </h4>
-      <p>Card number: 4242 4242 4242 4242</p>
-      <p>Any 3 digits / Any future date</p>
+      <div className="Footer">
+        <h4>Stripe API Integration Demo</h4>
+        <p>Simulation Card Number: 4242 4242 4242 4242</p>
+        <p>Any Future Date, Any 3 Digits</p>
+      </div>
     </div>
   );
 };
