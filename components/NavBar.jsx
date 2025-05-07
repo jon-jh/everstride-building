@@ -18,6 +18,7 @@ const NavBar = ({
       <div className="NavBar-item Logo-box">
         <Link href="/" className="Logo">
           <p>Everstride</p>
+          <p style={{ color: "darkslategrey" }}>2</p>
         </Link>
       </div>
 

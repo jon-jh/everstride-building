@@ -36,6 +36,8 @@
   border-top-left-radius: 18px;
 }
 
-.Footer h4, p{
-align-self: center;
+.Footer h4,
+p {
+  margin: 0;
+  align-self: center;
 }

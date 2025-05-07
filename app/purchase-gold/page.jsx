@@ -32,6 +32,9 @@ const PurchaseGold = () => {
       <div className="NavBar">
         <h1 className="NavBar-logo">
           <a href="/">Everstride</a>
+          <a href="/" style={{ color: "darkslategrey" }}>
+            2
+          </a>
         </h1>
       </div>
       <div className="checkout">
@@ -41,7 +44,7 @@ const PurchaseGold = () => {
       </div>
       <div className="Footer">
         <h4>Stripe API Integration Demo</h4>
-        <p>Simulation Card Number: 4242 4242 4242 4242</p>
+        <p>Simulation Card: 4242 4242 4242 4242</p>
         <p>Any Future Date, Any 3 Digits</p>
       </div>
     </div>
