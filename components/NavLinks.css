@@ -30,7 +30,6 @@ a {
   font-size: 26px;
   background-color: transparent;
   color: #1f1815;
-  /* text-shadow: 1px 1px 0px rgb(255, 190, 86); */
   border: none;
   cursor: pointer;
   position: relative;
@@ -57,7 +56,7 @@ a {
   position: absolute;
   width: 110px;
   height: 55px;
-  background-color: rgba(222, 217, 208, 0.379);
+  background-color: #9d9084;
   cursor: pointer;
   transition: 0.5s ease-in-out;
   z-index: 1;

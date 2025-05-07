@@ -9,6 +9,8 @@
   font-size: 1em;
   font-optical-sizing: auto;
   font-weight: 600;
+  border-radius: 15px;
+ 
 }
 
 /* Store Layout */
@@ -32,12 +34,11 @@
   margin: 0 2px;
   border: 3px solid lightslategrey;
   background-color: #f3f0eb;
-  border-radius: 4px;
+  border-radius: 8px;
   box-shadow: 3px 3px 0px rgb(125, 125, 125);
 }
 
 .Store-item:hover {
-  box-shadow: 3px 3px 0px black;
   background-color: white;
 }
 
