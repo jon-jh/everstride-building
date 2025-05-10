@@ -5,7 +5,7 @@
   align-items: center;
   position: fixed;
   height: 250px;
-  min-width: 400px;
+  min-width: 375px;
   top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -15,7 +15,7 @@
   /* Background settings */
   background-image: url("/assets/scenes/thefieldsoffrollicking.png");
   background-repeat: repeat-x;
-  background-size: 575%;
+  background-size: 625%;
   background-position: left center;
 
   /* Animation */

@@ -48,7 +48,7 @@
   background-color: transparent;
 }
 
-@media (max-width: 900) {
+@media (max-width: 800px) {
   .QuestComplete-description {
     font-size: 15px;
   }
