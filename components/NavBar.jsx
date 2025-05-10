@@ -14,8 +14,12 @@ const NavBar = ({
 }) => {
   return (
     <div className="NavBar">
+      
       {/* Logo Section */}
       <div className="NavBar-item Logo-box">
+          <Link href="/" className="Logo-small">
+            <p>ES</p>
+          </Link>
         <Link href="/" className="Logo">
           <p>Everstride</p>
           <p style={{ color: "darkslategrey" }}>2</p>

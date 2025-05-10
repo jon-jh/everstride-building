@@ -12,25 +12,54 @@
   font-size: 19px;
   width: fit-content;
   color: #9d9084;
+}
 
-  min-width: 110px;
+a.Logout-desktop {
+  height: min-content;
+}
+a.Logout-mobile {
+  width: 55px;
 }
 
 .UserLogOutContainer button {
   font-family: "Pixelify Sans", serif;
   font-weight: 500;
-  background-color: rgba(222, 217, 208, 0.63);
+  background-color: #9d9084;
   transition: 0.5s ease-out;
   width: 7em;
-  height:2em;
+  height: 2em;
   box-sizing: border-box;
   border-radius: 5px;
   border: none;
-  
 }
 
 .UserLogOutContainer button:hover {
   cursor: pointer;
-  background-color: rgba(222, 217, 208, 0.897);
+  background-color: rgba(222, 217, 208, 0.8);
   transition: 0s;
+}
+
+.Logout-mobile {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .Logout-desktop {
+    display: none;
+  }
+  .Logout-mobile {
+    display: flex;
+  }
+
+  /* Match Styling from NavLinks.css Mobile Buttons */
+  .Logout-mobile button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    color: #1f1815;
+    width: 55px;
+    height: 55px;
+    line-height: 22px;
+  }
 }

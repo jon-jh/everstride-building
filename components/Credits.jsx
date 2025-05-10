@@ -3,14 +3,13 @@ import "./Credits.css";
 const Credits = () => {
   return (
     <div className="Credits">
-      <h3>Contributors</h3>
+      <h4>Contributors</h4>
       {/* KYLE */}
       <b>Kyle McParland</b>
       <div className="links">
         <a className="link" href="https://www.linkedin.com/in/kyle-mcparland/">
           linkedin/kyle-mcparland
         </a>
-        |
         <a className="link" href="https://github.com/kylemcparland">
           github/kylemcparland
         </a>
@@ -25,7 +24,6 @@ const Credits = () => {
         >
           linkedin/jonathan-dh
         </a>
-        |
         <a className="link" href="https://github.com/jon-jh">
           github/jon-jh
         </a>
@@ -40,7 +38,6 @@ const Credits = () => {
         >
           linkedin/benjamin-d-hallam
         </a>
-        |
         <a className="link" href="https://github.com/bendhallam">
           github/bendhallam
         </a>

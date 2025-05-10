@@ -6,20 +6,15 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-
-  height: 100%;
+  height: 55px;
 }
 
 a,
 button {
+  width: 110px;
   padding: 0;
 }
 /* Fixes the spacing between Avatar Editor and Gold Market */
-
-a {
-  width: 110px;
-  height: 100%;
-}
 /* Makes the Avatar Editor box the same size as the other links, but also makes the logo box 110px */
 
 .NavLinks-button {
@@ -75,10 +70,9 @@ a {
   .mobile-button {
     display: flex;
   }
-  .NavLinks a:hover::before {
-    width: 55px;
-  }
+
   .button::before,
+  .NavLinks a:hover::before,
   .NavLinks a::before {
     width: 55px;
   }

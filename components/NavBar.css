@@ -17,35 +17,40 @@
 
 .Logo-box {
   width: max-content;
-  min-width: 120px;
+  min-width: fit-content;
   height: inherit;
 }
 
 /* .NavBar-logo for the stripe purchase page */
 .Logo,
+.Logo-small,
 .NavBar-logo {
   color: #9d9084;
   font-family: "Jacquard 12", serif;
-  font-weight: 400;
+  font-weight: 500;
   font-style: normal;
   font-size: 3.5em;
   margin: 0;
 }
 
-.NavBar-logo a {
-  color: #9d9084;
-  text-decoration: none;
-}
-
+.NavBar-logo a,
 a {
   text-decoration: none;
 }
 
+.Logo-small {
+  padding-top: 0.1em;
+  display: none;
+  width: 55px;
+}
+
 @media (max-width: 900px) {
-  .Logo {
-    font-size: clamp(28px, 5.5vw, 3.5em);
-  }
+  .Logo,
   .desktop-username {
     display: none;
+  }
+  .Logo-small {
+    display: flex;
+    font-size: 3em;
   }
 }
