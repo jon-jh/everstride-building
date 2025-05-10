@@ -25,11 +25,12 @@
 .Logo,
 .Logo-small,
 .NavBar-logo {
+  padding-top: 0.1em;
   color: #9d9084;
   font-family: "Jacquard 12", serif;
   font-weight: 500;
   font-style: normal;
-  font-size: 3.5em;
+  font-size: 2.5em;
   margin: 0;
 }
 
@@ -39,12 +40,11 @@ a {
 }
 
 .Logo-small {
-  padding-top: 0.1em;
   display: none;
   width: 55px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 800px) {
   .Logo,
   .desktop-username {
     display: none;
