@@ -1,5 +1,6 @@
 .NavBar {
   top: 0;
+  position: fixed;
   z-index: 2;
   display: flex;
   align-items: center;
@@ -7,6 +8,8 @@
   width: 100%;
   height: 55px;
   background-color: #1f1815;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .NavBar-item {
@@ -45,7 +48,7 @@ a {
   width: 55px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 750px) {
   .Logo,
   .desktop-username {
     display: none;
