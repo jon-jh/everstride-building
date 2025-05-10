@@ -43,7 +43,7 @@ a.Logout-mobile {
   display: none;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 750px) {
   .Logout-desktop {
     display: none;
   }
