@@ -11,3 +11,9 @@
   border-top-right-radius: 18px;
   border-top-left-radius: 18px;
 }
+
+@media (max-width: 750px) {
+  .Footer {
+    padding-bottom: 40px;
+  }
+}
