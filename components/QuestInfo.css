@@ -1,18 +1,16 @@
-
 .QuestInfo {
   display: flex;
   flex-direction: column;
-  height: 250px; /* Allow content to dictate height */
-  width: calc(100% -em); /* Prevent it from taking full width */
+  height: 250px;
+  width: 100%;
   box-sizing: border-box;
-  margin: 0 auto; /* Center it inside .Footer */
+  margin: 0 auto;
   padding: 1em;
   background-color: #dfd9d0;
   font-family: "Pixelify Sans", serif;
   font-optical-sizing: auto;
   border-radius: 18px;
 }
-
 
 .QuestInfo-body {
   display: flex;

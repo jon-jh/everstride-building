@@ -16,11 +16,12 @@
 /* Avatar */
 .avatar-display {
   position: fixed;
-  justify-content: flex-start;
-  bottom: 1em;
-  left: 0;
+  justify-content: center;
+  height: 29em;
+  bottom: 6em;
+  left: 0em;
   width: auto;
-  height: 95%;
+
   display: inline-block;
   pointer-events: none;
 }
@@ -38,6 +39,7 @@
   font-family: "Pixelify Sans", serif;
   font-size: 1.2em;
   width: 100%;
+  height: 90px;
   border: none;
   background-color: #f3f0eb;
   border-radius: 8px;
@@ -57,7 +59,7 @@
   left: 0;
 }
 
-.equipment-category{
+.equipment-category {
   width: 100%;
 }
 
@@ -83,12 +85,17 @@
 }
 
 .equipment-selection {
-  z-index: 4;
-  height: 100%;
   display: flex;
   flex-direction: column;
   overflow-y: auto;
   width: 55%;
+
+  padding-right: 1em;
+  padding-top: 1.5em;
+  padding-left: 1em;
+  padding-bottom: 1em;
+  height: fill;
+  z-index: 4;
 }
 
 .equipment-thumbnail {
@@ -133,4 +140,54 @@ button[title] {
 /* Add hover effect */
 button[title]:hover {
   box-shadow: 3px 3px 0px rgb(68, 62, 62);
+}
+
+@media (max-width: 750px) {
+  .avatar-editor-container {
+    flex-direction: column;
+    font-size: 18px;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .avatar-display {
+    height: 10em;
+    bottom: 19em;
+    left: 6em;
+  }
+
+  .avatar-editor-title {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .equip-button {
+    height: 2em;
+    width: auto;
+    font-size: 1em;
+    margin-top: 1em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    padding: 0.5em;
+  }
+
+  .equipment-selection {
+    margin-top: 8em;
+    flex-direction: row;
+    width: fill;
+  }
+
+  .equipment-thumbnail {
+    width: 80px;
+  }
+
+  .equipment-category button {
+    width: 80%;
+    margin-bottom: 0.5em;
+  }
+
+  button[title] {
+    width: 50px;
+    height: 20px;
+  }
 }
