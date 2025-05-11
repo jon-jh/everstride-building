@@ -17,7 +17,7 @@
 .avatar-display {
   position: fixed;
   justify-content: center;
-  height: 29em;
+  height: 25em;
   bottom: 6em;
   left: 0em;
   width: auto;
@@ -151,8 +151,8 @@ button[title]:hover {
   }
 
   .avatar-display {
-    height: 10em;
-    bottom: 19em;
+    height: 9em;
+    top: 8em;
     left: 6em;
   }
 
