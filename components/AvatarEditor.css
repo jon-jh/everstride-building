@@ -9,7 +9,7 @@
   font-family: "Pixelify Sans", serif;
   font-optical-sizing: auto;
   font-weight: 600;
-  font-size: 25px;
+  font-size: 22px;
   border-radius: 15px;
 }
 
@@ -17,9 +17,9 @@
 .avatar-display {
   position: fixed;
   justify-content: center;
-  height: 25em;
+  height: 18em;
   bottom: 6em;
-  left: 0em;
+  left: 3em;
   width: auto;
 
   display: inline-block;
