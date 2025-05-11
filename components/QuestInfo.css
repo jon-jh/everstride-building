@@ -26,11 +26,14 @@
 
 .QuestInfo-title {
   font-family: "Jacquard 12", serif;
-  font-size: 1em;
+  font-size: 1.5em;
 }
 
 @media (max-width: 750px) {
   .QuestInfo-description {
     font-size: 15px;
+  }
+  .QuestInfo-title {
+    font-size: 1em;
   }
 }
