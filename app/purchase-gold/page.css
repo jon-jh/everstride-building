@@ -1,43 +1,28 @@
-.NavBar {
-  display: inline-flex;
-  align-items: center;
-  justify-content: space-around;
-  width: 100%;
-  height: 55px;
-  background-color: #1f1815;
-  border-bottom-right-radius: 8px;
-  border-bottom-left-radius: 8px;
+.checkout {
+  margin-top: 75px;
+  box-shadow: 0px 900px 0px 1000vmax #ffffff;
 }
 
-.Logo,
-.NavBar-logo {
-  color: #9d9084;
-  font-family: "Jacquard 12", serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 3.5em;
-  margin: 0;
-}
-
-.NavBar-logo a {
-  color: #9d9084;
-  text-decoration: none;
-}
-
-.Footer {
-  position: fixed;
+.StripeDemoInfo {
+  align-self: center;
+  background-color: #dfd9d0;
+  border-radius: 18px;
+  bottom: 0;
   display: flex;
   flex-direction: column;
-  width: 100%;
-  height: 200px;
-  background-color: #9d9084;
-  z-index: 1;
-  border-top-right-radius: 18px;
-  border-top-left-radius: 18px;
+  font-family: "Pixelify Sans", serif;
+  height: auto;
+  left: 50%;
+  margin: 0;
+  min-width: 300px;
+  padding: 1em;
+  position: fixed;
+  transform: translateX(-50%);
+  margin-bottom: 15px;
 }
 
-.Footer h4,
+.StripeDemoInfo h4,
 p {
-  margin: 0;
   align-self: center;
+  margin: 0;
 }

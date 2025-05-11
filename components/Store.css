@@ -1,6 +1,7 @@
 .Store {
+  margin-top: 4em;
   text-align: center;
-  height: inherit;
+  height: fill;
   max-width: 850px;
   width: inherit;
   overflow-y: auto;

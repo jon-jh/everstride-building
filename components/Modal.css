@@ -3,6 +3,7 @@
   display: flex;
   position: fixed;
   justify-content: center;
+  
   top: 35%;
   left: 50%;
   transform: translate(-50%, -40%);
@@ -41,4 +42,16 @@
   width: 100%;
   background-color: #dfd9d0;
   border-radius: 8px;
+}
+
+@media (max-width: 750px) {
+  .Modal {
+    top: 37%;
+    width: 90%;
+    height: 85%;
+  }
+  .Modal-content {
+    height: fill;
+    width: fill;
+  }
 }
