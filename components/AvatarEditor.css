@@ -151,8 +151,8 @@ button[title]:hover {
   }
 
   .avatar-display {
-    height: 9em;
-    top: 8em;
+    height: 10em;
+    top: 7em;
     left: 6em;
   }
 
@@ -172,7 +172,8 @@ button[title]:hover {
   }
 
   .equipment-selection {
-    margin-top: 8em;
+    padding-top: 0em;
+    margin-top: 9.5em;
     flex-direction: row;
     width: fill;
   }
