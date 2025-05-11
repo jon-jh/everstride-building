@@ -3,9 +3,8 @@
   display: flex;
   flex-direction: row;
   flex-grow: 1;
-  width: calc(100% - 2em);
-  max-height: 450px;
-  margin-top: 1em;
+  align-self: center;
+  margin: 0 auto;
   background-image: url("/assets/scenes/start.png");
   background-size: cover;
   background-position: center;
@@ -15,6 +14,10 @@
   font-family: "Pixelify Sans", serif;
   font-weight: 500;
   border-radius: 18px;
+  width: calc(100% - 2em);
+  max-height: 450px;
+  min-width: 300px;
+  margin-top: 1em;
 }
 
 .LocationDiv,
@@ -139,6 +142,6 @@
 
 @media (max-width: 750px) {
   .StepVisualizer {
-    max-height: 300px;
+    max-height: 250px;
   }
 }
