@@ -2,13 +2,16 @@
   position: fixed;
   display: flex;
   justify-content: center;
+  align-items: center;
   bottom: 0;
   flex-shrink: 0;
-  width: 100%;
+  width: calc(100% - 40px);
   min-width: 300px;
   height: 250px;
   background-color: none;
   z-index: 1;
   border-radius: 18px;
-  padding-bottom: 20px;
+  padding-bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
 }
