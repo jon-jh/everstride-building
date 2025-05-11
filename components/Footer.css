@@ -9,13 +9,6 @@
   height: 250px;
   background-color: none;
   z-index: 1;
-  border-top-right-radius: 18px;
-  border-top-left-radius: 18px;
+  border-radius: 18px;
   padding-bottom: 20px;
-}
-
-@media (max-width: 750px) {
-  .Footer {
-    padding-bottom: 40px;
-  }
 }
