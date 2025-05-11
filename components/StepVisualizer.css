@@ -4,7 +4,7 @@
   flex-direction: row;
   flex-grow: 1;
   width: calc(100% - 2em);
-  min-height: 130px;
+  max-height: 450px;
   margin-top: 1em;
   background-image: url("/assets/scenes/start.png");
   background-size: cover;
