@@ -2,8 +2,9 @@
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   margin-top: 75px;
-  padding-bottom:265px;
+  padding-bottom: 265px;
   background-color: #8560573e;
 }
