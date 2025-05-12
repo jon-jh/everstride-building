@@ -55,7 +55,7 @@
 
 .gold-earned-notification {
   position: absolute;
-  top: 5em;
+  top: 2em;
   left: 50%;
   transform: translateX(-50%);
   font-family: "Pixelify Sans", serif;
@@ -66,8 +66,8 @@
   background-color: #4f4c46ea;
   border-radius: 18px;
   text-align: center;
-  padding-left: 1em;
-  padding-right: 1em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
   z-index: 1;
 }
 
