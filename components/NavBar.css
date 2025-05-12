@@ -45,7 +45,7 @@ a {
   width: 55px;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 800px) {
   .Logo,
   .desktop-username {
     display: none;
