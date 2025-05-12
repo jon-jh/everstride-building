@@ -19,11 +19,16 @@
   min-width: 300px;
   margin-top: 1em;
 }
+.StepVisualizer-progress,
+.LocationDiv {
+  color: white;
+  text-shadow: 1px 1px 0px #ff6a6a;
+}
 
 .LocationDiv,
 .LocationP {
   z-index: 0;
-  width: 10em;
+  width: stretch;
 }
 .StepVisualizer-progress {
   z-index: 0;
@@ -49,18 +54,19 @@
 
 .gold-earned-notification {
   position: absolute;
-  top: 3em;
+  top: 5em;
   left: 50%;
   transform: translateX(-50%);
   font-family: "Pixelify Sans", serif;
+  font-size: larger;
   font-weight: 600;
   color: #ffd700;
-  background-color: black;
-  border-radius: 12px;
+  text-shadow: 1px 1px 0px #000000;
+  background-color: #4f4c46ea;
+  border-radius: 18px;
   text-align: center;
   padding-left: 1em;
   padding-right: 1em;
-  min-width: 12em;
   z-index: 1;
 }
 
@@ -69,12 +75,17 @@
 }
 
 .AddProgressDiv input {
-  border-top-left-radius: 12px;
-  border-bottom-left-radius: 12px;
-  text-align: right;
+  background-color: rgba(240, 248, 255, 0.636);
+  text-align: center;
   outline: none;
-  border: none;
+  border-top-left-radius: 18px;
+  border-bottom-left-radius: 18px;
   z-index: 1;
+}
+.AddProgressDiv button,
+.AddProgressDiv input:is(:disabled) {
+  color: transparent;
+  background-color: transparent;
 }
 
 .AddProgressDiv button:not(:disabled) {
@@ -82,8 +93,8 @@
   background-color: #4caf50;
 }
 .AddProgressDiv button {
-  border-top-right-radius: 12px;
-  border-bottom-right-radius: 12px;
+  border-top-right-radius: 18px;
+  border-bottom-right-radius: 18px;
 }
 .AddProgressDiv input,
 .AddProgressDiv button {
@@ -107,20 +118,18 @@
 .StepVisualizer-progress,
 .AddProgressDiv {
   flex: 1;
-  min-width: 14em;
   text-align: center;
   margin: 0 auto;
 }
 
 .StepVisualizer-textbackground {
+  background-color: #4f4c46af;
   margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #dfd9d0;
-  width: 14em;
   height: 2em;
-  border-radius: 12px;
+  border-radius: 18px;
 }
 
 .StepVisualizer-goal {
@@ -134,14 +143,62 @@
   color: #ffd700;
   background-color: black;
   width: 4em;
+  align-content: center;
   min-width: fit-content;
   height: 100%;
-  border-radius: 12px;
+  border-radius: 18px;
   font-size: calc(1rem + 1vh);
 }
 
-@media (max-width: 750px) {
+@media (max-width: 900px) {
   .StepVisualizer {
     max-height: 250px;
+    flex-direction: column;
+  }
+  .StepVisualizer-textbackground {
+    background-color: #4f4c46af;
+    height: 50px;
+  }
+  .AddProgressDiv {
+    position: absolute;
+    font-size: medium;
+    top: 0;
+    width: stretch;
+    text-align: space-between;
+  }
+  .AddProgressDiv input {
+    background-color: rgba(240, 248, 255, 0.489);
+  }
+
+  .AddProgressDiv button,
+  .AddProgressDiv input {
+    font-size: large;
+    height: 50px;
+  }
+
+  .AddProgressDiv .StepVisualizer-textbackground {
+    background-color: transparent;
+  }
+  .StepVisualizer-progress,
+  .LocationDiv {
+    color: white;
+    text-shadow: 1px 1px 0px #ff6a6a;
+    position: absolute;
+    font-size: small;
+    width: 50%;
+    bottom: 0;
+  }
+
+  .StepVisualizer-progress {
+    z-index: 1;
+    left: 0;
+  }
+
+  .LocationDiv {
+    right: 0;
+    z-index: 1;
+  }
+  .StepVisualizer-gold {
+    background-color: transparent;
   }
 }

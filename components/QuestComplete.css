@@ -1,4 +1,5 @@
 .QuestComplete-choice {
+  margin-top: -20px;
   height: 250px;
   width: 100%;
   min-width: inherit;
@@ -56,9 +57,23 @@
   .QuestComplete-description {
     font-size: 16px;
   }
+  .QuestComplete-buttons {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    top: 0;
+    transform: translateY(-110%);
+  }
   .QuestComplete-button {
     font-size: large;
     padding: 0.1em;
-    width: 100%;
+    width: 50%;
+  }
+  .QuestComplete-button:first-of-type {
+    left: 0;
+  }
+  .QuestComplete-button:last-of-type {
+    right: 0;
   }
 }

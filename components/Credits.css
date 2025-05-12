@@ -1,8 +1,9 @@
 .Credits {
+  font-family: "Pixelify Sans", serif;
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 250px;
+  height: 200px;
   width: 100%;
   max-width: 500px;
   min-width: 300px;
@@ -20,12 +21,14 @@
 }
 
 .link {
-  color:whitesmoke;
+  color: slateblue;
   height: 25px;
   width: fit-content;
 }
 
-.Credits h4, .Credits b {
-  color:whitesmoke;
+.Credits h4,
+.Credits b {
+  color: slateblue;
   margin-top: 0.5em;
+  margin-bottom: 0px;
 }
