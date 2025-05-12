@@ -82,10 +82,15 @@
   border-bottom-left-radius: 18px;
   z-index: 1;
 }
+
 .AddProgressDiv button,
 .AddProgressDiv input:is(:disabled) {
   color: transparent;
   background-color: transparent;
+}
+
+.AddProgressDiv input:disabled::placeholder {
+  color: transparent;
 }
 
 .AddProgressDiv button:not(:disabled) {
