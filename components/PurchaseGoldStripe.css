@@ -1,17 +1,30 @@
 .PurchaseGoldStripe {
   font-family: "Pixelify Sans", serif;
-  font-optical-sizing: auto;
+
   display: flex;
+  position: fixed;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
+
+  top: 105%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+
+  height: 6em;
+  max-width: 850px;
   width: 100%;
+
+  background-color: whitesmoke;
+  border: solid #554c49 8px;
+  border-radius: 15px;
+
   background-color: #dfd9d0;
   border: solid #554c49 8px;
   border-radius: 15px;
 }
 
 .PurchaseGoldStripe-ad {
-  width: 200px;
+  width: 50%;
 }
 
 .PurchaseGoldStripe-link:hover::before {
@@ -19,23 +32,21 @@
 }
 
 .PurchaseGoldStripe-link {
-  width: 350px;
+  width: 400px;
 }
 
 .PurchaseGoldStripe-button {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  align-content: center;
-  min-width: 350px;
-  height: 55px;
+  justify-content: space-around;
+  width: 350px;
+  height: 90px;
   padding: 10px 20px;
   cursor: pointer;
   z-index: 1;
 
   font-family: "Pixelify Sans", serif;
   font-size: 1em;
-  font-optical-sizing: auto;
   border: none;
   background-color: #f3f0eb;
   border-radius: 8px;
@@ -49,4 +60,16 @@
 .Store-Stripe-Banner {
   border-radius: 15px;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@media (max-width: 750px) {
+  .PurchaseGoldStripe-button {
+    width: 200px;
+  }
+  .PurchaseGoldStripe-link {
+    width: 200px;
+  }
+  .PurchaseGoldStripe {
+    top: 100%;
+  }
 }

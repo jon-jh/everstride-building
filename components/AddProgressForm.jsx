@@ -34,11 +34,12 @@ const AddProgressForm = ({ user, isDisabled }) => {
         <input
           type="number"
           value={distance}
+          placeholder="Enter Steps"
           onChange={(e) => setDistance(e.target.value)}
           disabled={isDisabled}
         />
         <button type="submit" disabled={isDisabled}>
-          Add Steps
+          Walk
         </button>
       </form>
       {goldEarned !== null && goldEarned !== 0 && (

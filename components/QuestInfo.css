@@ -1,12 +1,11 @@
 .QuestInfo {
   display: flex;
   flex-direction: column;
-  height: 200px;
-  min-width: 375px;
-  width: 75%;
+  height: 250px;
+  width: 100%;
   box-sizing: border-box;
-  padding-left: 1em;
-  padding-right: 1em;
+  margin: 0 auto;
+  padding: 1em;
   background-color: #dfd9d0;
   font-family: "Pixelify Sans", serif;
   font-optical-sizing: auto;
@@ -23,11 +22,14 @@
 
 .QuestInfo-title {
   font-family: "Jacquard 12", serif;
-  font-size: 1.2em;
+  font-size: 1.5em;
 }
 
 @media (max-width: 750px) {
   .QuestInfo-description {
-    font-size: 15px;
+    font-size: 14px;
+  }
+  .QuestInfo-title {
+    font-size: 1em;
   }
 }

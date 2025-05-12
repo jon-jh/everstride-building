@@ -19,27 +19,25 @@
 
 /* Background world map image */
 .world-map-image {
-  width: 100%;
-  height: 100%;
+  width: fill;
+  height: fill;
   object-fit: fill;
 }
 
 /* Location image size and positioning */
 .location-image {
   position: absolute;
-  width: 10vw;
-  height: 10vw;
-  max-width: 120px;
-  max-height: 120px;
+  width: 12vw;
+  height: 12vw;
+  max-width: 150px;
+  max-height: 150px;
 }
 
 /* Default styling for SVG text labels */
 svg text {
   font-family: "Jacquard 12", serif;
-  text-shadow: 1px 1px 0px rgb(255, 190, 86);
+  text-shadow: 3px 1px 0px #ffe0a6, 0px 3px 0px rgb(255, 218, 170);
   font-weight: 600;
-  font-size: 1.2vw;
-  fill: black;
   text-anchor: middle;
   pointer-events: none;
   transition: font-size 0.3s ease;
@@ -65,11 +63,11 @@ svg text {
 
 /* Location text styling */
 .location-text {
-  font-size: 2vw;
+  font-size: 2.5vw;
   fill: black;
   text-anchor: middle;
   pointer-events: none;
-  transition: font-size 0.3s ease;
+  transition: font-size 0.2s ease;
 }
 
 /* Mobile-specific adjustments */
@@ -77,11 +75,16 @@ svg text {
   .location-image {
     width: 20vw;
     height: 20vw;
-    max-width: 240px;
-    max-height: 240px;
+    max-width: 300px;
+    max-height: 300px;
   }
 
   .location-text {
     font-size: 4vw;
+  }
+  .world-map-image {
+    width: fill;
+    height: 65%;
+    object-fit: fill;
   }
 }

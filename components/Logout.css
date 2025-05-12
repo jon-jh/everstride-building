@@ -43,7 +43,7 @@ a.Logout-mobile {
   display: none;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 800px) {
   .Logout-desktop {
     display: none;
   }
@@ -56,8 +56,9 @@ a.Logout-mobile {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 26px;
-    color: #1f1815;
+    font-size: 2em;
+    background-color: transparent;
+    color: #9d9084;
     width: 55px;
     height: 55px;
     line-height: 22px;

@@ -3,8 +3,6 @@
   position: fixed;
   z-index: 2;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
   width: 100%;
   height: 55px;
   background-color: #1f1815;
@@ -25,7 +23,6 @@
   height: inherit;
 }
 
-/* .NavBar-logo for the stripe purchase page */
 .Logo,
 .Logo-small,
 .NavBar-logo {
@@ -48,7 +45,7 @@ a {
   width: 55px;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 800px) {
   .Logo,
   .desktop-username {
     display: none;

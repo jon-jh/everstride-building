@@ -1,5 +1,8 @@
 .QuestComplete-choice {
-  height: 200px;
+  margin-top: -20px;
+  height: 250px;
+  width: 100%;
+  min-width: inherit;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11,6 +14,7 @@
 .QuestComplete-description {
   padding-top: 0.5em;
   padding-bottom: 0.5em;
+  height: fit-content;
 }
 
 .QuestComplete-congrats {
@@ -19,7 +23,7 @@
 
 .QuestComplete-buttons {
   display: flex;
-  width: 65%;
+  width: 100%;
   justify-content: space-around;
   padding-top: 0.5em;
 }
@@ -32,6 +36,7 @@
   background-color: #f3f0eb;
   border-radius: 8px;
   box-shadow: 3px 3px 0px rgb(125, 125, 125);
+  width: 100%;
 }
 
 .QuestComplete-button:hover {
@@ -50,10 +55,25 @@
 
 @media (max-width: 750px) {
   .QuestComplete-description {
-    font-size: 15px;
+    font-size: 16px;
+  }
+  .QuestComplete-buttons {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    top: 0;
+    transform: translateY(-110%);
   }
   .QuestComplete-button {
     font-size: large;
-    padding: 0.4em;
+    padding: 0.1em;
+    width: 50%;
+  }
+  .QuestComplete-button:first-of-type {
+    left: 0;
+  }
+  .QuestComplete-button:last-of-type {
+    right: 0;
   }
 }
