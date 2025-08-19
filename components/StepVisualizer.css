@@ -53,22 +53,35 @@
   z-index: 1;
 }
 
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.1;
+  }
+}
+
 .gold-earned-notification {
   position: absolute;
+
+  height: 100%;
+  width: stretch;
+
   top: 2em;
-  left: 50%;
-  transform: translateX(-50%);
-  font-family: "Pixelify Sans", serif;
   font-size: larger;
   font-weight: 600;
   color: #ffd700;
-  text-shadow: 1px 1px 0px #000000;
-  background-color: #4f4c46ea;
+  text-shadow: 1px 1px 0px #ff6a6a;
+  background-color: black;
   border-radius: 18px;
   text-align: center;
   padding-left: 0.5em;
   padding-right: 0.5em;
   z-index: 1;
+
+  animation: fadeOut 3s linear forwards;
+  animation-delay: 2s;
 }
 
 .AddProgressDiv {

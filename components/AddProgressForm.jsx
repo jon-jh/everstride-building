@@ -43,9 +43,7 @@ const AddProgressForm = ({ user, isDisabled }) => {
         </button>
       </form>
       {goldEarned !== null && goldEarned !== 0 && (
-        <div className="gold-earned-notification">
-          You walked {distance} steps! <br /> You got {goldEarned} gold!
-        </div>
+        <div className="gold-earned-notification">💰 {goldEarned} ++</div>
       )}
     </div>
   );

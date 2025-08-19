@@ -12,6 +12,8 @@
 }
 
 .QuestComplete-description {
+  background-color: blueviolet;
+  border-radius: 18px;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
   height: fit-content;
