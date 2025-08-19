@@ -3,9 +3,10 @@ require("dotenv").config();
 
 const db = new Pool({
   connectionString: process.env.DATABASE_URL,
-  ssl: { rejectUnauthorized: false }, // Required for Supabase
+  ssl: {
+    rejectUnauthorized: false, // Required for Neon SSL connections
+  },
 });
-
 
 // Function to update the distance traveled today for a user
 db.updateDistance = async (userName, distance) => {
@@ -22,4 +23,3 @@ db.updateDistance = async (userName, distance) => {
 };
 
 module.exports = db;
-
