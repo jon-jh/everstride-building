@@ -68,6 +68,10 @@
   height: 100%;
   width: stretch;
 
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
   top: 2em;
   font-size: larger;
   font-weight: 600;
@@ -75,7 +79,7 @@
   text-shadow: 1px 1px 0px #ff6a6a;
   background-color: black;
   border-radius: 18px;
-  text-align: center;
+
   padding-left: 0.5em;
   padding-right: 0.5em;
   z-index: 1;
@@ -162,6 +166,7 @@
   color: #ffd700;
   background-color: black;
   width: 4em;
+
   align-content: center;
   min-width: fit-content;
   height: 100%;
@@ -219,5 +224,8 @@
   }
   .StepVisualizer-gold {
     background-color: transparent;
+  }
+  .gold-earned-notification {
+    padding-top: 1em;
   }
 }
