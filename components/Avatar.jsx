@@ -1,4 +1,4 @@
-import './Avatar.css';  // Assuming you're using an external CSS file
+import './Avatar.css';
 
 const Avatar = ({ hat, shirt, pants, boots, weapon, colour, animate }) => {
 
