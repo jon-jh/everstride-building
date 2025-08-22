@@ -1,13 +1,3 @@
-.avatar-display {
-  position: relative;
-  flex-grow: 1;
-  display: inline-block;
-  height: inherit;
-  width: auto;
-}
-
-/* Added inherited height to all images. Change .avatar-display's height to change all. */
-
 .avatar-base {
   height: inherit;
 }
